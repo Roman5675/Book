@@ -1,0 +1,318 @@
+@mixin adaptive-value($property, $startSize ,$minSize, $maxWidth, $minWidth) {
+    $addSize: $startSize - $minSize;
+    $addWidth: $maxWidth - $minWidth;
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$addWidth}));
+}
+//Шрифт
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 0px) {}
+
+.title {
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 124.7%;
+}
+
+//Section listen start
+.listen__column {
+    display: flex;
+    flex-direction: column;
+    max-width: 1920px;
+    margin: 0px auto;
+    background-image: url(../img/1.png);
+    background-repeat: no-repeat;
+}
+
+.listen__image {
+    display: flex;
+    justify-content: center;
+    margin-top: 84px;
+    margin-right: 117px;
+    margin-left: 117px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( margin-top , 84 , 10 , 1920 , 320 );
+        @include adaptive-value( margin-right , 117 , 10 , 1920 , 320 );
+        @include adaptive-value( margin-left , 117 , 10 , 1920 , 320 );
+    }
+}
+
+.listen__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 142px;
+    margin-bottom: 300px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( margin-bottom , 300 , 30 , 1920 , 320 );
+        @include adaptive-value( gap , 142 , 24 , 1920 , 320 );
+    }
+}
+.listen__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 598px;
+    padding-right: 32px;
+    padding-left: 32px;
+    @media (max-width: 598px) {
+        flex: 0 0 100%;
+    }
+}
+
+.listen__card-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.listen__title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 124.7%; /* 39.904px */
+    text-transform: uppercase;
+    @media (max-width: 662px) {
+        text-align: left;
+    }
+}
+//Section listen end
+
+//Плеер
+.player , .player2 , .player3 , .player4 , .player5 , .player6 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+}
+
+.btn , .btn2 , .btn3 , .btn4 , .btn5 , .btn6 {
+    cursor: pointer;
+}
+
+.buttons , .buttons2 , .buttons3 , .buttons4 , .buttons5 , .buttons6 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 10px 10px 10px;
+    .next , .next2 , .next3 , .next4 , .next5 , .next6 {
+        rotate: 180deg;
+    }
+}
+
+.size {
+    width: 108px;
+    height: 108px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( width , 108 , 46 , 1920 , 320 );
+        @include adaptive-value( height , 108 , 46 , 1920 , 320 );
+    }
+}
+
+.progress__container, .progress__container2 , .progress__container3 , .progress__container4 , .progress__container5 , .progress__container6 {
+    width: 100%;
+    height: 6px;
+    background-color: #FFF;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    .progress , .progress2 , .progress3 , .progress4 , .progress5 , .progress6 {
+        background-color: #848080;
+        height: 6px;
+    }
+}
+
+.song , .song2 , .song3 , .song4 , .song5 , .song6 {
+    text-align: center;
+    margin-bottom: 12px;
+}
+//Плеер
+
+
+
+//Section button start
+.first-button {
+    margin-bottom: 91px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( margin-bottom , 91 , 30 , 1920 , 320 );
+    }
+}
+
+.second-button {
+    margin-bottom: 300px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( margin-bottom , 300 , 30 , 1920 , 320 );
+    }
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+    border-radius: 87px;
+    background: #7DF9FF;
+    &:hover {
+        background: rgba(224, 220, 220, 0.5);  
+    }
+    margin-left: 150px;
+    margin-right: 150px;
+    @media (max-width: 1920px) {
+        @include adaptive-value(margin-left  , 150 , 15 , 1920 , 320 );
+        @include adaptive-value(margin-right  , 150 , 15 , 1920 , 320 );
+        @include adaptive-value( height , 170 , 50 , 1920 , 320 );
+    }
+    p {
+        color: #000;
+        font-family: EB Garamond;
+        font-size: 64px;
+        font-weight: 800;
+        line-height: 124.7%;
+        text-transform: uppercase;
+        @media (max-width: 1920px) {
+            @include adaptive-value( font-size , 64 , 16 , 1920 , 320 );
+        }
+    }
+    @media (max-width: 662px) {
+        display: none;
+    }
+}
+//Section button end
+
+//Section footer start
+.footer__column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__list-top {
+    display: flex;
+    justify-content: center;
+    gap: 106px;
+    flex-wrap: wrap;
+    margin-bottom: 147px;
+    li:nth-child(2) {
+        display: none;
+    }
+    li:nth-child(3) {
+        display: none;
+    }
+    @media (max-width: 1920px) {
+        @include adaptive-value( gap ,106  , 16 ,1920  ,320  );
+        @include adaptive-value( margin-bottom , 147 , 30 , 1920 , 320 );
+    }
+    @media (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+    }
+    @media (max-width: 1000px) {
+        li:nth-child(1) {
+            display: none;
+        }
+        li:nth-child(2) {
+            display: block;
+        }
+        li:nth-child(3) {
+            display: block;
+        }
+        li:nth-child(4) {
+            display: none;
+        }
+        li:nth-child(5) {
+            display: none;
+        }
+    }
+}
+
+.footer__list-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 106px;
+    flex-wrap: wrap;
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-bottom: 147px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( margin-left , 110 , 15 , 1920 , 320 );
+        @include adaptive-value( margin-right , 110 , 15 , 1920 , 320 );
+        @include adaptive-value( gap ,106  , 16 ,1920  ,320  );
+        @include adaptive-value( margin-bottom , 147 , 30 , 1920 , 320 );
+    }
+    @media (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+    }
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+        li:nth-child(3) {
+            display: none;
+        }
+        
+    }
+}
+
+.footer__link {
+    color: #FFF;
+    &:hover {
+        color: rgba(224, 220, 220, 0.5);  
+    }
+    font-family: PT Sans Narrow;
+    font-size: 32px;
+    line-height: 124.7%;
+}
+
+.footer__text {
+    color: #FFF;
+    font-family: PT Sans Narrow;
+    font-size: 32px;
+    line-height: 124.7%;
+}
+
+.footer__line {
+    width: auto;
+    height: 1px;
+    background: rgba(217, 217, 217, 0.70);
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-bottom: 147px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( margin-left , 110 , 15 , 1920 , 320 );
+        @include adaptive-value( margin-right , 110 , 15 , 1920 , 320 );
+        @include adaptive-value( margin-bottom , 147 , 30 , 1920 , 320 );
+    }
+}
+//Section footer end

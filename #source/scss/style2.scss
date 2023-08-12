@@ -1,0 +1,230 @@
+@mixin adaptive-value($property, $startSize ,$minSize, $maxWidth, $minWidth) {
+    $addSize: $startSize - $minSize;
+    $addWidth: $maxWidth - $minWidth;
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$addWidth}));
+}
+//Шрифт
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 0px) {}
+
+.title {
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 124.7%;
+}
+//Section welcome start
+.welcome__column {
+    display: flex;
+    flex-direction: column;
+    max-width: 1920px;
+    margin: 0px auto;
+    background-image: url(../img/1.png);
+    background-repeat: no-repeat;
+}
+
+.welcome__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome__title {
+    font-size: 90px;
+    padding-top: 150px;
+    padding-left: 122px;
+    padding-right: 122px;
+    padding-bottom: 150px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( font-size , 90 , 32 , 1920 , 320 );
+        @include adaptive-value( padding-top , 150 , 30 , 1920 , 320 );
+        @include adaptive-value( padding-left , 122 , 15 , 1920 , 320 );
+        @include adaptive-value( padding-right , 122 , 15 , 1920 , 320 );
+        @include adaptive-value( padding-bottom , 150 , 30 , 1920 , 320 );
+    }
+}
+.welcome__intro {
+    font-size: 54px;
+    padding-left: 122px;
+    padding-right: 122px;
+    padding-bottom: 216px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( font-size , 54 , 16 , 1920 , 320 );
+        @include adaptive-value( padding-left , 122 , 15 , 1920 , 320 );
+        @include adaptive-value( padding-right , 122 , 15 , 1920 , 320 );
+        @include adaptive-value( padding-bottom , 216 , 30 , 1920 , 320 );
+    }
+    & p:first-child{
+        padding-bottom: 216px;
+        @media (max-width: 1920px) {
+            @include adaptive-value( padding-bottom , 216 , 30 , 1920 , 320 );
+        }
+    }
+}
+.welcome__bio {
+    font-size: 54px;
+    padding-left: 30px;
+    padding-right: 30px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( font-size , 54 , 16 , 1920 , 320 );
+        @include adaptive-value( padding-left , 30 , 15 , 1920 , 320 );
+        @include adaptive-value( padding-right , 30 , 15 , 1920 , 320 );
+    }
+    p {
+        padding-bottom: 200px;
+        @media (max-width: 1920px) {
+            @include adaptive-value( padding-bottom , 200 , 30 , 1920 , 320 );
+        }
+    }
+}
+//Section welcome end
+
+//Section button start
+.first-button {
+    margin-bottom: 91px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( margin-bottom , 91 , 30 , 1920 , 320 );
+    }
+}
+
+.second-button {
+    margin-bottom: 306px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( margin-bottom , 306 , 30 , 1920 , 320 );
+    }
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+    border-radius: 87px;
+    background: #7DF9FF;
+    &:hover {
+        background: rgba(224, 220, 220, 0.5);  
+    }
+    margin-left: 150px;
+    margin-right: 150px;
+    @media (max-width: 1920px) {
+        @include adaptive-value(margin-left  , 150 , 15 , 1920 , 320 );
+        @include adaptive-value(margin-right  , 150 , 15 , 1920 , 320 );
+        @include adaptive-value( height , 170 , 50 , 1920 , 320 );
+    }
+    p {
+        color: #000;
+        font-family: EB Garamond;
+        font-size: 64px;
+        font-weight: 800;
+        line-height: 124.7%;
+        text-transform: uppercase;
+        @media (max-width: 1920px) {
+            @include adaptive-value( font-size , 64 , 16 , 1920 , 320 );
+        }
+    }
+}
+//Section button end
+
+//Section footer start
+.footer__column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__list-top {
+    display: flex;
+    justify-content: center;
+    gap: 106px;
+    flex-wrap: wrap;
+    margin-bottom: 147px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( gap ,106  , 16 ,1920  ,320  );
+        @include adaptive-value( margin-bottom , 147 , 30 , 1920 , 320 );
+    }
+    @media (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.footer__list-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 106px;
+    flex-wrap: wrap;
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-bottom: 147px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( margin-left , 110 , 15 , 1920 , 320 );
+        @include adaptive-value( margin-right , 110 , 15 , 1920 , 320 );
+        @include adaptive-value( gap ,106  , 16 ,1920  ,320  );
+        @include adaptive-value( margin-bottom , 147 , 30 , 1920 , 320 );
+    }
+    @media (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.footer__link {
+    color: #FFF;
+    &:hover {
+        color: rgba(224, 220, 220, 0.5);  
+    }
+    font-family: PT Sans Narrow;
+    font-size: 32px;
+    line-height: 124.7%;
+}
+
+.footer__text {
+    color: #FFF;
+    font-family: PT Sans Narrow;
+    font-size: 32px;
+    line-height: 124.7%;
+}
+
+.footer__line {
+    width: auto;
+    height: 1px;
+    background: rgba(217, 217, 217, 0.70);
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-bottom: 147px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( margin-left , 110 , 15 , 1920 , 320 );
+        @include adaptive-value( margin-right , 110 , 15 , 1920 , 320 );
+        @include adaptive-value( margin-bottom , 147 , 30 , 1920 , 320 );
+    }
+}
+//Section footer end
+
