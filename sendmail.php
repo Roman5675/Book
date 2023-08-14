@@ -11,7 +11,7 @@
     $mail->IsHtml(true);
 
     //От кого письмо
-    $mail->setFrom('', '');
+    $mail->setFrom('pecherik007@gmail.com', 'Роман');
     //Кому отправить
     $mail->addAdress('pwpec95@gmail.com');
     //Тема письма
@@ -23,10 +23,10 @@
     if(trim(!empty($_POST['name']))){
         $body.='<p><strong>Имя:</strong> ' .$_POST['name'].'</p>';
     }
-    if(trim(!empty($_POST['name']))){
+    if(trim(!empty($_POST['email']))){
         $body.='<p><strong>E-mail:</strong> ' .$_POST['email'].'</p>';
     }
-    if(trim(!empty($_POST['name']))){
+    if(trim(!empty($_POST['message']))){
         $body.='<p><strong>Собщение:</strong> ' .$_POST['message'].'</p>';
     }
 
