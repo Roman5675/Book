@@ -11,37 +11,11 @@
 </head>
 <body>
 	<div class="wrapper">
-		<header class="header">
-			<div class="header__row">
-				<div class="header__logo">
-					<a href="/">
-						<p></p>
-					</a>
-				</div>
-				<div class="header__menu menu">
-					<div class="menu__icon">
-						<span></span>
-					</div>
-					<nav class="menu__body">
-						<ul class="menu__list">
-							<li>
-								<a data-goto=".read__section" href="#" class="menu__link">Читать</a>
-							</li>
-							<li>
-								<a data-goto=".listen__section" href="#" class="menu__link">Слушать</a>
-							</li>
-							<li>
-								<a data-goto=".biography__section" href="#" class="menu__link">Биография автора</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
-
+		
 		<main class="main">
 			<section class="book">
 				<div class="book__column">
+				
 					<div class="crime">
 						<div class="crime__column">
 							<div class="crime__text">
@@ -100,6 +74,33 @@
 						</div>
 					</div>
 
+					<div class="form">
+						<form action="#" id="form" class="form__body">
+							<div>
+								<h2 class="form__title">Приобрести книгу "Преступление и наказание"</h2>
+							</div>
+							<div class="form__item">
+								<label for="formName" class="form__label">Имя*:</label>
+								<input id="formName" type="text" name="name" class="form__input _req">
+							</div>
+							<div class="form__item">
+								<label for="formEmail" class="form__label">E-mail*:</label>
+								<input id="formEmail" type="text" name="email" class="form__input _req _email">
+							</div>
+							<div class="form__item">
+								<label for="formMessage" class="form__label">Сообщение:</label>
+								<textarea name="message" id="formMessage" class="form__input"></textarea>
+							</div>
+							<div class="form__item">
+								<div class="checkbox">
+									<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req">
+									<label for="formAgreement" class="checkbox__label"><span>Я даю свое согласие на обработку персональных данных в соотвествии с <a href="">Условиями</a>*</span></label>
+								</div>
+							</div>
+							<button type="submit" class="form__button">Отправить</button>
+						</form>
+					</div>
+					
 					<a href="/">
                         <div class="first-button button">
                             <p>read</p>
@@ -113,17 +114,29 @@
                     </a>
 
 					<footer class="footer">
-						<ul class="footer__list">
-							<li>
-								<a data-goto=".read__section" href="#" class="footer__link">Читать и слушать</a>
-							</li>
-							<li>
-								<a data-goto=".listen__section" href="#" class="footer__link">об авторе</a>
-							</li>
-							<li>
-								<a data-goto=".biography__section" href="#" class="footer__link">все работы</a>
-							</li>
-						</ul>
+						<div class="footer__column">
+                            <ul class="footer__list-top">
+                                <li>
+                                    <a href="#" class="footer__link">Читать и слушать</a>
+                                </li>
+                                <li>
+                                    <a href="./index.html" class="footer__link">об авторе</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">все работы</a>
+                                </li>
+                            </ul>
+
+                            <div class="footer__line"></div>
+                            
+                            <ul class="footer__list-bottom">
+                                <li class="footer__text">Design by Vladislav</li>
+                                <li class="footer__text">2023</li>
+                                <li>
+                                    <a href="#" class="footer__link">More work</a>
+                                </li>
+                            </ul>
+                        </div>
 					</footer>
 				</div>
 			</section>

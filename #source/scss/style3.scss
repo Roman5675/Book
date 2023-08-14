@@ -50,7 +50,7 @@ img{
     flex-direction: column;
     max-width: 1920px;
     margin: 0px auto;
-    background-image: url(../img/1.png);
+    background: linear-gradient(180deg, #060407 0%, #7C485D 18.75%, #B2989F 30.73%, #213549 54.17%, #6399AA 70.31%, #79337D 82.29%, #140A10 100%);
     background-repeat: no-repeat;
 }
 
@@ -65,6 +65,15 @@ img{
         @include adaptive-value( margin-right , 117 , 10 , 1920 , 320 );
         @include adaptive-value( margin-left , 117 , 10 , 1920 , 320 );
     }
+    @media (max-width: 800px) {
+        display: none;
+    }
+}
+
+.listen__background-image {
+    img {
+        border-radius: 20px;
+    }
 }
 
 .listen__cards {
@@ -77,44 +86,37 @@ img{
         @include adaptive-value( gap , 142 , 24 , 1920 , 320 );
     }
 }
-.listen__card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 0 0 598px;
-    padding-right: 32px;
-    padding-left: 32px;
-    @media (max-width: 598px) {
-        flex: 0 0 100%;
-    }
-}
 
-.listen__card-image {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.listen__title {
+.listen__title{
+    display: none;
     text-align: center;
-    font-size: 32px;
+    font-family: Basis Grotesque Pro;
+    font-size: 23.944px;
+    font-weight: 500;
+    line-height: 124.7%; /* 29.858px */
+    text-transform: uppercase;
+    margin-top: 62px;
+    margin-left: 30px;
+    margin-right: 30px;
+    @media (max-width: 800px) {
+        display: block;
+    }
+} 
+
+.listen__subtitle {
+    text-align: center;
+    font-size: 18px;
     font-weight: 300;
     line-height: 124.7%; /* 39.904px */
     text-transform: uppercase;
-    @media (max-width: 662px) {
-        text-align: left;
-    }
 }
 //Section listen end
 
 //Плеер
 .player , .player2 , .player3 , .player4 , .player5 , .player6 {
-    position: absolute;
     display: flex;
     flex-direction: column;
-    bottom: 0;
+    margin-bottom: 27px;
 }
 
 .btn , .btn2 , .btn3 , .btn4 , .btn5 , .btn6 {
@@ -126,7 +128,7 @@ img{
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    padding: 0px 10px 10px 10px;
+    padding: 0px 10px 0px 10px;
     .next , .next2 , .next3 , .next4 , .next5 , .next6 {
         rotate: 180deg;
     }
@@ -206,7 +208,7 @@ img{
             @include adaptive-value( font-size , 64 , 16 , 1920 , 320 );
         }
     }
-    @media (max-width: 662px) {
+    @media (max-width: 800px) {
         display: none;
     }
 }
@@ -316,3 +318,134 @@ img{
     }
 }
 //Section footer end
+
+//Cекция task start
+
+.task__wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    @media (max-width: 1919px) {
+        max-width: 1320px;
+    }
+    
+    @media (max-width: 800px) {
+        max-width: 496px;
+    } 
+}
+
+//Swiper слайдер start
+.swiper {
+    width: 100%;
+    height: auto;
+    padding-top: 72px;
+    padding-bottom: 72px;
+    padding-left: 36px;
+    padding-right: 36px;
+    margin: 0px auto;
+    @media (max-width: 1919px) {
+        max-width: 1483px;
+    }
+    
+    @media (max-width: 800px) {
+        max-width: 496px;
+    }
+    @media (max-width: 954px) {
+        padding-top: calc(14px + (72 - 14) * ((100vw - 400px) / (954 - 400)));
+        padding-bottom: calc(14px + (72 - 14) * ((100vw - 400px) / (954 - 400)));
+    }
+    @media (max-width: 399px) {
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+}
+
+.task-slider__image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border-radius: 20px;
+    background: rgba(91, 130, 137, 0.5);
+    
+}
+
+
+.task-slider__title {
+    padding-bottom: 16px;
+}
+
+.task-slider__border {
+    width: 100%;
+    border: 1px solid #C7C8D0;
+    margin-bottom: 16px;
+}
+.task-slider__text {
+    text-align: justify;
+}
+.task-slider__link {
+    p {
+        font-size: 16px;
+        color: #763D9E;
+    }
+}
+//Swiper слайдер end
+
+//Кнопки переключения start
+.task__button {
+    width: 78px;
+    height: 78px;
+    @media (max-width: 954px) {
+        width: calc(35px + (78 - 35) * ((100vw - 400px) / (954 - 400)));
+        height: calc(35px + (78 - 35) * ((100vw - 400px) / (954 - 400)));
+    }
+    @media (max-width: 399px) {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.task__button::after {
+    color: rgba(199, 185, 240, 0);
+}
+
+.swiper-button-prev {
+    left: 10px;
+    background-image: url(../img/svg/task-2.png);
+    background-repeat: no-repeat;
+    background-size: 78px 78px;
+    @media (max-width: 954px) {
+        
+        background-size: calc(35px + (78 - 35) * ((100vw - 400px) / (954 - 400))) calc(35px + (78 - 35) * ((100vw - 400px) / (954 - 400)));
+    }
+    @media (max-width: 499px) {
+        
+        
+    }
+    @media (max-width: 399px) {
+        background-image: url(../img/svg/task-3.png);
+        background-size: 35px 35px;
+    }
+}
+
+.swiper-button-next {
+    right: 10px;
+    background-image: url(../img/svg/task-1.png);
+    background-repeat: no-repeat;
+    background-size: 78px 78px;
+    @media (max-width: 954px) {
+        
+        background-size: calc(35px + (78 - 35) * ((100vw - 400px) / (954 - 400))) calc(35px + (78 - 35) * ((100vw - 400px) / (954 - 400)));
+    }
+    @media (max-width: 499px) {
+    }
+    @media (max-width: 399px) {
+        background-image: url(../img/svg/task-4.png);
+        
+        background-size: 35px 35px;
+    }
+}
+//Кнопки переключения end
+
+//Cекция task end

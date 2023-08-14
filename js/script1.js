@@ -1,3 +1,23 @@
+//Слайдер swiper
+new Swiper('.task-slider', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+    spaceBetween: 56,
+    breakpoints: {
+        1920: {
+            slidesPerView: 3
+        },
+        
+        801: {
+            slidesPerView: 2
+        },
+        0: {
+            slidesPerView: 1
+        },
+    },
+});
 
 //Плеер
 const player = document.querySelector('.player'),
