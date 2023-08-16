@@ -8,84 +8,68 @@
 	<meta name="description" content="" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 	<link rel="stylesheet" href="./css/style3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
 	<div class="wrapper">
 		<main class="main">
 			<section class="listen">
 				<div class="listen__column">
-					<div class="listen__image padding">
-                        <img src="./img/3.png" alt="">
-                    </div>
-                    <div class="listen__title">
-                        <h2>преступление и наказание</h2>
-                    </div>
-
+                    
                     <section class="task">
                         <div class="task__wrapper">
                             <div class="task-slider swiper">
                                 <div class="task-slider__wrapper swiper-wrapper">
                                     <div class="task-slider__slide swiper-slide">
                                         <div class="task-slider__image">
-                                            <div class="listen__background-image">
-                                                <img src="./img/4.png" alt="#">
-                                            </div>
+                                            <div class="audioplayer-first audio">
+                                                <div class="player__image">
+                                                    <img src="./img/music-1.png" alt="#">
+                                                </div>
 
-                                            <div class="listen__subtitle">
-                                                <h2>Михаил Федорович Достоевский</h2>
-                                            </div>
-                                            <div class="listen__subtitle">
-                                                <h2>Часть 1</h2>
-                                            </div>
-                        
-                                            <div class="player">
-                                                <div class="song"></div>
-                                                <audio class="audio"></audio>
-                                                <div class="progress__container">
-                                                    <div class="progress"></div>
+                                                <div class="player__title">
+                                                    <h2>Часть 1</h2>
                                                 </div>
-                                                <div class="buttons">
-                                                    <div class="btn prev">
-                                                        <img src="./img/12.png" alt="btn">
-                                                    </div>
-                                                    <div class="btn play size">
-                                                        <img class="img__src" src="./img/11.png" alt="btn">
-                                                    </div>
-                                                    <div class="btn next">
-                                                        <img src="./img/12.png" alt="btn">
-                                                    </div>
+
+                                                <div class="player__subtitle">
+                                                    <h3>Преступление<br> и наказание</h3>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <div class="task-slider__slide swiper-slide">
-                                        <div class="task-slider__image">
-                                            <div class="listen__background-image">
-                                                <img src="./img/5.png" alt="#">
-                                            </div>
-                                            <div class="listen__subtitle">
-                                                <h2>Михаил Федорович Достоевский</h2>
-                                            </div>
-                                            <div class="listen__subtitle">
-                                                <h2>Часть 2</h2>
-                                            </div>
-                                            <div class="player2">
-                                                <div class="song2"></div>
-                                                <audio class="audio2"></audio>
-                                                <div class="progress__container2">
-                                                    <div class="progress2"></div>
-                                                </div>
-                                                <div class="buttons2">
-                                                    <div class="btn2 prev2">
-                                                        <img src="./img/12.png" alt="btn2">
+                                            
+                                                <div class="player">
+                                                    <div class="song-details">
+                                                        <p class="name"></p>
+                                                        <p class="artist"></p>
                                                     </div>
-                                                    <div class="btn2 play2 size">
-                                                        <img class="img__src2" src="./img/11.png" alt="btn2">
+                                              
+                                                    <div class="progress-area">
+                                                        <div class="progress-bar">
+                                                            <audio id="main-audio" src=""></audio>
+                                                        </div>
+                                                        <div class="song-timer">
+                                                            <span class="current-time">0:00</span>
+                                                            <span class="max-duration">0:00</span>
+                                                        </div>
                                                     </div>
-                                                    <div class="btn2 next2">
-                                                        <img src="./img/12.png" alt="btn2">
+                                              
+                                                    <div class="controls">
+                                                        <i id="repeat-plist" class="material-icons" title="Playlist looped"></i>
+                                                        <i id="prev" class="material-icons"></i>
+                                                        <div class="play-pause">
+                                                            <i class="material-icons play">play_arrow</i>
+                                                        </div>
+                                                        <i id="next" class="material-icons"></i>
+                                                        <i id="more-music" class="material-icons"></i>
                                                     </div>
+                                              
+                                                    <div class="music-list" id="close">
+                                                        <div class="header">
+                                                            <i id="close"></i>
+                                                        </div>
+                                                        <ul>
+                                                        <!-- here li list are coming from js -->
+                                                        </ul>
+                                                    </div>
+                                            
                                                 </div>
                                             </div>
                                         </div>
@@ -93,63 +77,54 @@
         
                                     <div class="task-slider__slide swiper-slide">
                                         <div class="task-slider__image">
-                                            <div class="listen__background-image">
-                                                <img src="./img/6.png" alt="#">
-                                            </div>
-                                            <div class="listen__subtitle">
-                                                <h2>Михаил Федорович Достоевский</h2>
-                                            </div>
-                                            <div class="listen__subtitle">
-                                                <h2>Часть 3</h2>
-                                            </div>
-                                            <div class="player3">
-                                                <div class="song3"></div>
-                                                <audio class="audio3"></audio>
-                                                <div class="progress__container3">
-                                                    <div class="progress3"></div>
+                                            <div class="audioplayer-second audio">
+                                                <div class="player__image">
+                                                    <img src="./img/music-2.png" alt="#">
                                                 </div>
-                                                <div class="buttons3">
-                                                    <div class="btn3 prev3">
-                                                        <img src="./img/12.png" alt="btn3">
-                                                    </div>
-                                                    <div class="btn3 play3 size">
-                                                        <img class="img__src3" src="./img/11.png" alt="btn3">
-                                                    </div>
-                                                    <div class="btn3 next3">
-                                                        <img src="./img/12.png" alt="btn3">
-                                                    </div>
+
+                                                <div class="player__title">
+                                                    <h2>Часть 2</h2>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <div class="task-slider__slide swiper-slide">
-                                        <div class="task-slider__image">
-                                            <div class="listen__background-image">
-                                                <img src="./img/7.png" alt="#">
-                                            </div>
-                                            <div class="listen__subtitle">
-                                                <h2>Михаил Федорович Достоевский</h2>
-                                            </div>
-                                            <div class="listen__subtitle">
-                                                <h2>Часть 4</h2>
-                                            </div>
-                                            <div class="player4">
-                                                <div class="song4"></div>
-                                                <audio class="audio4"></audio>
-                                                <div class="progress__container4">
-                                                    <div class="progress4"></div>
+
+                                                <div class="player__subtitle">
+                                                    <h3>Преступление<br> и наказание</h3>
                                                 </div>
-                                                <div class="buttons4">
-                                                    <div class="btn4 prev4">
-                                                        <img src="./img/12.png" alt="btn4">
+                                            
+                                                <div class="player">
+                                                    <div class="song-details">
+                                                        <p class="name"></p>
+                                                        <p class="artist"></p>
                                                     </div>
-                                                    <div class="btn4 play4 size">
-                                                        <img class="img__src4" src="./img/11.png" alt="btn4">
+                                              
+                                                    <div class="progress-area">
+                                                        <div class="progress-bar">
+                                                            <audio id="main-audio" src=""></audio>
+                                                        </div>
+                                                        <div class="song-timer">
+                                                            <span class="current-time">0:00</span>
+                                                            <span class="max-duration">0:00</span>
+                                                        </div>
                                                     </div>
-                                                    <div class="btn4 next4">
-                                                        <img src="./img/12.png" alt="btn4">
+                                              
+                                                    <div class="controls">
+                                                        <i id="repeat-plist" class="material-icons" title="Playlist looped"></i>
+                                                        <i id="prev" class="material-icons"></i>
+                                                        <div class="play-pause">
+                                                            <i class="material-icons play">play_arrow</i>
+                                                        </div>
+                                                        <i id="next" class="material-icons"></i>
+                                                        <i id="more-music" class="material-icons"></i>
                                                     </div>
+                                              
+                                                    <div class="music-list" id="close">
+                                                        <div class="header">
+                                                            <i id="close"></i>
+                                                        </div>
+                                                        <ul>
+                                                        <!-- here li list are coming from js -->
+                                                        </ul>
+                                                    </div>
+                                            
                                                 </div>
                                             </div>
                                         </div>
@@ -157,31 +132,54 @@
         
                                     <div class="task-slider__slide swiper-slide">
                                         <div class="task-slider__image">
-                                            <div class="listen__background-image">
-                                                <img src="./img/8.png" alt="#">
-                                            </div>
-                                            <div class="listen__subtitle">
-                                                <h2>Михаил Федорович Достоевский</h2>
-                                            </div>
-                                            <div class="listen__subtitle">
-                                                <h2>Часть 5</h2>
-                                            </div>
-                                            <div class="player5">
-                                                <div class="song5"></div>
-                                                <audio class="audio5"></audio>
-                                                <div class="progress__container5">
-                                                    <div class="progress5"></div>
+                                            <div class="audioplayer-third audio">
+                                                <div class="player__image">
+                                                    <img src="./img/music-3.png" alt="#">
                                                 </div>
-                                                <div class="buttons5">
-                                                    <div class="btn5 prev5">
-                                                        <img src="./img/12.png" alt="btn5">
+                                            
+                                                <div class="player__title">
+                                                    <h2>Часть 3</h2>
+                                                </div>
+
+                                                <div class="player__subtitle">
+                                                    <h3>Преступление<br> и наказание</h3>
+                                                </div>
+
+                                                <div class="player">
+                                                    <div class="song-details">
+                                                        <p class="name"></p>
+                                                        <p class="artist"></p>
                                                     </div>
-                                                    <div class="btn5 play5 size">
-                                                        <img class="img__src5" src="./img/11.png" alt="btn5">
+                                              
+                                                    <div class="progress-area">
+                                                        <div class="progress-bar">
+                                                        <audio id="main-audio" src=""></audio>
+                                                        </div>
+                                                        <div class="song-timer">
+                                                        <span class="current-time">0:00</span>
+                                                        <span class="max-duration">0:00</span>
+                                                        </div>
                                                     </div>
-                                                    <div class="btn5 next5">
-                                                        <img src="./img/12.png" alt="btn5">
+                                              
+                                                    <div class="controls">
+                                                        <i id="repeat-plist" class="material-icons" title="Playlist looped"></i>
+                                                        <i id="prev" class="material-icons"></i>
+                                                        <div class="play-pause">
+                                                        <i class="material-icons play">play_arrow</i>
+                                                        </div>
+                                                        <i id="next" class="material-icons"></i>
+                                                        <i id="more-music" class="material-icons"></i>
                                                     </div>
+                                              
+                                                    <div class="music-list" id="close">
+                                                        <div class="header">
+                                                        <i id="close"></i>
+                                                        </div>
+                                                        <ul>
+                                                        <!-- here li list are coming from js -->
+                                                        </ul>
+                                                    </div>
+                                            
                                                 </div>
                                             </div>
                                         </div>
@@ -189,31 +187,164 @@
         
                                     <div class="task-slider__slide swiper-slide">
                                         <div class="task-slider__image">
-                                            <div class="listen__background-image">
-                                                <img src="./img/9.png" alt="#">
-                                            </div>
-                                            <div class="listen__subtitle">
-                                                <h2>Михаил Федорович Достоевский</h2>
-                                            </div>
-                                            <div class="listen__subtitle">
-                                                <h2>Часть 6</h2>
-                                            </div>
-                                            <div class="player6">
-                                                <div class="song6"></div>
-                                                <audio class="audio6"></audio>
-                                                <div class="progress__container6">
-                                                    <div class="progress6"></div>
+                                            <div class="audioplayer-fourth audio">
+                                                <div class="player__image">
+                                                    <img src="./img/music-4.png" alt="#">
                                                 </div>
-                                                <div class="buttons6">
-                                                    <div class="btn6 prev6">
-                                                        <img src="./img/12.png" alt="btn6">
+
+                                                <div class="player__title">
+                                                    <h2>Часть 4</h2>
+                                                </div>
+
+                                                <div class="player__subtitle">
+                                                    <h3>Преступление<br> и наказание</h3>
+                                                </div>
+                                            
+                                                <div class="player">
+                                                    <div class="song-details">
+                                                        <p class="name"></p>
+                                                        <p class="artist"></p>
                                                     </div>
-                                                    <div class="btn6 play6 size">
-                                                        <img class="img__src6" src="./img/11.png" alt="btn6">
+                                              
+                                                    <div class="progress-area">
+                                                        <div class="progress-bar">
+                                                        <audio id="main-audio" src=""></audio>
+                                                        </div>
+                                                        <div class="song-timer">
+                                                        <span class="current-time">0:00</span>
+                                                        <span class="max-duration">0:00</span>
+                                                        </div>
                                                     </div>
-                                                    <div class="btn6 next6">
-                                                        <img src="./img/12.png" alt="btn6">
+                                              
+                                                    <div class="controls">
+                                                        <i id="repeat-plist" class="material-icons" title="Playlist looped"></i>
+                                                        <i id="prev" class="material-icons"></i>
+                                                        <div class="play-pause">
+                                                        <i class="material-icons play">play_arrow</i>
+                                                        </div>
+                                                        <i id="next" class="material-icons"></i>
+                                                        <i id="more-music" class="material-icons"></i>
                                                     </div>
+                                              
+                                                    <div class="music-list" id="close">
+                                                        <div class="header">
+                                                        <i id="close"></i>
+                                                        </div>
+                                                        <ul>
+                                                        <!-- here li list are coming from js -->
+                                                        </ul>
+                                                    </div>
+                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="task-slider__slide swiper-slide">
+                                        <div class="task-slider__image">
+                                            <div class="audioplayer-fifth audio">
+                                                <div class="player__image">
+                                                    <img src="./img/music-5.png" alt="#">
+                                                </div>
+
+                                                <div class="player__title">
+                                                    <h2>Часть 5</h2>
+                                                </div>
+
+                                                <div class="player__subtitle">
+                                                    <h3>Преступление<br> и наказание</h3>
+                                                </div>
+                                            
+                                                <div class="player">
+                                                    <div class="song-details">
+                                                        <p class="name"></p>
+                                                        <p class="artist"></p>
+                                                    </div>
+                                              
+                                                    <div class="progress-area">
+                                                        <div class="progress-bar">
+                                                        <audio id="main-audio" src=""></audio>
+                                                        </div>
+                                                        <div class="song-timer">
+                                                        <span class="current-time">0:00</span>
+                                                        <span class="max-duration">0:00</span>
+                                                        </div>
+                                                    </div>
+                                              
+                                                    <div class="controls">
+                                                        <i id="repeat-plist" class="material-icons" title="Playlist looped"></i>
+                                                        <i id="prev" class="material-icons"></i>
+                                                        <div class="play-pause">
+                                                        <i class="material-icons play">play_arrow</i>
+                                                        </div>
+                                                        <i id="next" class="material-icons"></i>
+                                                        <i id="more-music" class="material-icons"></i>
+                                                    </div>
+                                              
+                                                    <div class="music-list" id="close">
+                                                        <div class="header">
+                                                        <i id="close"></i>
+                                                        </div>
+                                                        <ul>
+                                                        <!-- here li list are coming from js -->
+                                                        </ul>
+                                                    </div>
+                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="task-slider__slide swiper-slide">
+                                        <div class="task-slider__image">
+                                            <div class="audioplayer-sixth audio">
+                                                <div class="player__image">
+                                                    <img src="./img/music-6.png" alt="#">
+                                                </div>
+
+                                                <div class="player__title">
+                                                    <h2>Часть 6</h2>
+                                                </div>
+
+                                                <div class="player__subtitle">
+                                                    <h3>Преступление<br> и наказание</h3>
+                                                </div>
+                                            
+                                                <div class="player">
+                                                    <div class="song-details">
+                                                        <p class="name"></p>
+                                                        <p class="artist"></p>
+                                                    </div>
+                                              
+                                                    <div class="progress-area">
+                                                        <div class="progress-bar">
+                                                        <audio id="main-audio" src=""></audio>
+                                                        </div>
+                                                        <div class="song-timer">
+                                                        <span class="current-time">0:00</span>
+                                                        <span class="max-duration">0:00</span>
+                                                        </div>
+                                                    </div>
+                                              
+                                                    <div class="controls">
+                                                        <i id="repeat-plist" class="material-icons" title="Playlist looped"></i>
+                                                        <i id="prev" class="material-icons"></i>
+                                                        <div class="play-pause">
+                                                        <i class="material-icons play">play_arrow</i>
+                                                        </div>
+                                                        <i id="next" class="material-icons"></i>
+                                                        <i id="more-music" class="material-icons"></i>
+                                                    </div>
+                                              
+                                                    <div class="music-list" id="close">
+                                                        <div class="header">
+                                                        <i id="close"></i>
+                                                        </div>
+                                                        <ul>
+                                                        <!-- here li list are coming from js -->
+                                                        </ul>
+                                                    </div>
+                                            
                                                 </div>
                                             </div>
                                         </div>
@@ -225,38 +356,8 @@
                         </div>
                     </section>
 
-                    <a href="/">
-                        <div class="first-button button">
-                            <p>read</p>
-                        </div>
-                    </a>
-                    
-                    <a href="/">
-                        <div class="second-button button">
-                            <p>listen</p>
-                        </div>
-                    </a>
-                    
-
 					<footer class="footer">
                         <div class="footer__column">
-                            <ul class="footer__list-top">
-                                <li>
-                                    <a href="#" class="footer__link">Читать и слушать</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="footer__link">Читать</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="footer__link">Слушать</a>
-                                </li>
-                                <li>
-                                    <a href="./index.html" class="footer__link">об авторе</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="footer__link">все работы</a>
-                                </li>
-                            </ul>
 
                             <div class="footer__line"></div>
                             
@@ -271,11 +372,15 @@
                             </ul>
                         </div>
 					</footer>
+
+                    
 				</div>
 			</section>
 		</main>
 	</div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="./js/script1.js"></script>
+    <script src="./js/music-list.js"></script>
+    <script src="./js/script1player.js"></script>
+    
 </body>
 </html>

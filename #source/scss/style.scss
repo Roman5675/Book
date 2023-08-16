@@ -23,7 +23,6 @@ body{
     color: #FFF;
     display: flex;
     flex-direction: column;
-    background-repeat: no-repeat;
 }
 
 
@@ -69,7 +68,7 @@ img{
     gap: 147px;
     max-width: 1920px;
     margin: 0px auto;
-    background-image: url(../img/1.png);
+    background: linear-gradient(180deg, #213549 9.90%, #6399AA 34.90%, #79337D 68.23%, #140A10 93.67%), #FFF;
     background-repeat: no-repeat;
     @media (max-width: 1920px) {
         @include adaptive-value( gap , 147 , 30 , 1920 , 320 );

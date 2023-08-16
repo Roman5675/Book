@@ -4,6 +4,7 @@
     #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$addWidth}));
 }
 //Шрифт
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
 
 // Файл обнуляющих стилей
@@ -112,107 +113,6 @@ img{
 }
 //Section listen end
 
-//Плеер
-.player , .player2 , .player3 , .player4 , .player5 , .player6 {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 27px;
-}
-
-.btn , .btn2 , .btn3 , .btn4 , .btn5 , .btn6 {
-    cursor: pointer;
-}
-
-.buttons , .buttons2 , .buttons3 , .buttons4 , .buttons5 , .buttons6 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 0px 10px 0px 10px;
-    .next , .next2 , .next3 , .next4 , .next5 , .next6 {
-        rotate: 180deg;
-    }
-}
-
-.size {
-    width: 108px;
-    height: 108px;
-    @media (max-width: 1920px) {
-        @include adaptive-value( width , 108 , 46 , 1920 , 320 );
-        @include adaptive-value( height , 108 , 46 , 1920 , 320 );
-    }
-}
-
-.progress__container, .progress__container2 , .progress__container3 , .progress__container4 , .progress__container5 , .progress__container6 {
-    width: 100%;
-    height: 6px;
-    background-color: #FFF;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    .progress , .progress2 , .progress3 , .progress4 , .progress5 , .progress6 {
-        background-color: #848080;
-        height: 6px;
-    }
-}
-
-.song , .song2 , .song3 , .song4 , .song5 , .song6 {
-    text-align: center;
-    margin-bottom: 12px;
-}
-//Плеер
-
-
-
-//Section button start
-.first-button {
-    margin-bottom: 91px;
-    @media (max-width: 1920px) {
-        @include adaptive-value( margin-bottom , 91 , 30 , 1920 , 320 );
-    }
-}
-
-.second-button {
-    margin-bottom: 300px;
-    @media (max-width: 1920px) {
-        @include adaptive-value( margin-bottom , 300 , 30 , 1920 , 320 );
-    }
-}
-
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 170px;
-    border-radius: 87px;
-    background: #7DF9FF;
-    &:hover {
-        background: rgba(224, 220, 220, 0.5);  
-    }
-    margin-left: 150px;
-    margin-right: 150px;
-    @media (max-width: 1920px) {
-        @include adaptive-value(margin-left  , 150 , 15 , 1920 , 320 );
-        @include adaptive-value(margin-right  , 150 , 15 , 1920 , 320 );
-        @include adaptive-value( height , 170 , 50 , 1920 , 320 );
-    }
-    p {
-        color: #000;
-        font-family: EB Garamond;
-        font-size: 64px;
-        font-weight: 800;
-        line-height: 124.7%;
-        text-transform: uppercase;
-        @media (max-width: 1920px) {
-            @include adaptive-value( font-size , 64 , 16 , 1920 , 320 );
-        }
-    }
-    @media (max-width: 800px) {
-        display: none;
-    }
-}
-//Section button end
 
 //Section footer start
 .footer__column {
@@ -292,14 +192,12 @@ img{
     &:hover {
         color: rgba(224, 220, 220, 0.5);  
     }
-    font-family: PT Sans Narrow;
     font-size: 32px;
     line-height: 124.7%;
 }
 
 .footer__text {
     color: #FFF;
-    font-family: PT Sans Narrow;
     font-size: 32px;
     line-height: 124.7%;
 }
@@ -320,45 +218,28 @@ img{
 //Section footer end
 
 //Cекция task start
-
 .task__wrapper {
     position: relative;
     width: 100%;
     height: auto;
     margin: 0px auto;
-    @media (max-width: 1919px) {
-        max-width: 1320px;
+    margin-bottom: 80px;
+    @media (max-width: 3000px) {
+        max-width: 640px;
+    }
+    @media (max-width: 1199px) {
+        max-width: 690px;
+    }
+    @media (max-width: 850px) {
+        max-width: 320px;
     }
     
-    @media (max-width: 800px) {
-        max-width: 496px;
-    } 
 }
 
 //Swiper слайдер start
 .swiper {
     width: 100%;
     height: auto;
-    padding-top: 72px;
-    padding-bottom: 72px;
-    padding-left: 36px;
-    padding-right: 36px;
-    margin: 0px auto;
-    @media (max-width: 1919px) {
-        max-width: 1483px;
-    }
-    
-    @media (max-width: 800px) {
-        max-width: 496px;
-    }
-    @media (max-width: 954px) {
-        padding-top: calc(14px + (72 - 14) * ((100vw - 400px) / (954 - 400)));
-        padding-bottom: calc(14px + (72 - 14) * ((100vw - 400px) / (954 - 400)));
-    }
-    @media (max-width: 399px) {
-        padding-top: 14px;
-        padding-bottom: 14px;
-    }
 }
 
 .task-slider__image {
@@ -393,59 +274,264 @@ img{
 //Swiper слайдер end
 
 //Кнопки переключения start
-.task__button {
-    width: 78px;
-    height: 78px;
-    @media (max-width: 954px) {
-        width: calc(35px + (78 - 35) * ((100vw - 400px) / (954 - 400)));
-        height: calc(35px + (78 - 35) * ((100vw - 400px) / (954 - 400)));
-    }
-    @media (max-width: 399px) {
-        width: 35px;
-        height: 35px;
-    }
-}
-
 .task__button::after {
     color: rgba(199, 185, 240, 0);
 }
 
 .swiper-button-prev {
-    left: 10px;
+    top: 50px;
+    left: 20px;
     background-image: url(../img/svg/task-2.png);
     background-repeat: no-repeat;
-    background-size: 78px 78px;
-    @media (max-width: 954px) {
-        
-        background-size: calc(35px + (78 - 35) * ((100vw - 400px) / (954 - 400))) calc(35px + (78 - 35) * ((100vw - 400px) / (954 - 400)));
-    }
-    @media (max-width: 499px) {
-        
-        
-    }
-    @media (max-width: 399px) {
-        background-image: url(../img/svg/task-3.png);
-        background-size: 35px 35px;
-    }
 }
 
 .swiper-button-next {
+    top: 400px;
     right: 10px;
     background-image: url(../img/svg/task-1.png);
     background-repeat: no-repeat;
-    background-size: 78px 78px;
-    @media (max-width: 954px) {
-        
-        background-size: calc(35px + (78 - 35) * ((100vw - 400px) / (954 - 400))) calc(35px + (78 - 35) * ((100vw - 400px) / (954 - 400)));
-    }
-    @media (max-width: 499px) {
-    }
-    @media (max-width: 399px) {
-        background-image: url(../img/svg/task-4.png);
-        
-        background-size: 35px 35px;
-    }
+    transform: rotate(180deg);
 }
 //Кнопки переключения end
 
 //Cекция task end
+
+//плеер 
+.audio {
+    display: flex;
+    @media (max-width: 1199px) {
+        flex-direction: column;
+    }
+    
+}
+
+.audioplayer-first, .audioplayer-second, .audioplayer-third, 
+.audioplayer-fourth, .audioplayer-fifth, .audioplayer-sixth{
+    width: 640px;
+    position: relative;
+    background: linear-gradient(180deg, #213549 9.90%, #6399AA 34.90%, #79337D 68.23%, #140A10 90.63%);
+    @media (max-width: 1199px) {
+        width: 320px;
+    }
+}
+
+.audioplayer-first, .audioplayer-second, .audioplayer-third, 
+.audioplayer-fourth, .audioplayer-fifth, .audioplayer-sixth i{
+    cursor: pointer;
+}
+
+.top-bar, .progress-area .song-timer, 
+.controls, .music-list .header, .music-list ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.song-details{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.song-details .name{
+    font-size: 21px;
+    color: #ffffff;
+}
+
+.player {
+    padding: 0px 30px;
+    width: 260px;
+    
+}
+  
+.player__title {
+    position: absolute;
+    left: 35px;
+    top: 214px;
+    color: #6BD6D0;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 124.7%; /* 27.434px */
+    text-transform: lowercase;
+}
+
+.player__subtitle {
+    position: absolute;
+    left: 35px;
+    top: 248px;
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 124.7%; /* 27.434px */
+    text-transform: uppercase;
+}
+
+.player__image {
+    display: flex;
+    justify-content: right;
+    background: #000;
+    border-radius: 0px 0px 80px 0px;
+}
+  
+.player__image img {
+    border-radius: 0px 0px 80px 0px;
+}
+  
+.progress-area{
+    height: 6px;
+    width: 100%;
+    border-radius: 50px;
+    background: #f0f0f0;
+    cursor: pointer;
+}
+
+.progress-area .progress-bar{
+    height: inherit;
+    width: 0%;
+    position: relative;
+    border-radius: inherit;
+    background: #6BD6D0;;
+}
+
+.progress-bar::before{
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    top: 50%;
+    right: -5px;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%);
+    background: inherit;
+    transition: opacity 0.2s ease;
+}
+
+.progress-area:hover .progress-bar::before{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.progress-area .song-timer{
+    margin-top: 2px;
+}
+
+.song-timer span{
+    margin-top: 5px;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.controls{
+    position: absolute;
+    top: 342px;
+    left: 35px;
+}
+
+.controls i{
+    font-size: 28px;
+    
+}
+
+.controls i:nth-child(2),
+.controls i:nth-child(4){
+    font-size: 43px;
+}
+
+.controls #prev{
+    margin-right: -13px;
+}
+
+.controls #next{
+    margin-left: -13px;
+}
+
+.controls .play-pause{
+    height: 54px;
+    width: 54px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #6BD6D0;;
+}
+
+.play-pause::before{
+    position: absolute;
+    content: "";
+}
+ 
+.play-pause i{
+    height: 43px;
+    width: 43px;
+    line-height: 43px;
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+}
+  
+.music-list{
+    margin-top: 20px;
+    pointer-events: auto;
+}
+  
+.header {
+    display: none;
+}
+  
+.header .row{
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    color: #ffffff;
+}
+.header .row i{
+    cursor: default;
+    
+}
+.header .row span{
+    margin-left: 5px;
+    
+}
+.header #close{
+    font-size: 22px;
+    color: var(--lightblack);
+}
+
+.music-list ul{
+    margin-top: 30px;
+}
+
+.music-list ul::-webkit-scrollbar{
+    width: 0px;
+}
+
+.music-list ul li{
+    list-style: none;
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 40px;
+    color: #ffffff;
+    
+}
+  
+.music-list ul li .row span{
+    font-size: 17px;
+}
+.music-list ul li .row p{
+    opacity: 0.9;
+}
+
+ul li .audio-duration{
+    font-size: 16px;
+}
+
+ul li.playing{
+    pointer-events: none;
+    color: #6BD6D0;;
+}
+//плеер end

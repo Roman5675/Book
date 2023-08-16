@@ -131,7 +131,8 @@ img {
           flex-direction: column;
   max-width: 1920px;
   margin: 0px auto;
-  background-image: url(../img/1.png);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(9.9%, #213549), color-stop(34.9%, #6399AA), color-stop(68.23%, #79337D), color-stop(93.67%, #140A10)), #FFF;
+  background: linear-gradient(180deg, #213549 9.9%, #6399AA 34.9%, #79337D 68.23%, #140A10 93.67%), #FFF;
   background-repeat: no-repeat;
 }
 
