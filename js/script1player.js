@@ -165,7 +165,7 @@ for (let i = 0; i < allMusic.length; i++) {
                   <span>${allMusic[i].name}</span>
                   <p>${allMusic[i].artist}</p>
                 </div>
-                <span id="${allMusic[i].src}" class="audio-duration"></span>
+                <span id="${allMusic[i].src}" class="audio-duration">load</span>
                 <audio class="${allMusic[i].src}" src="${allMusic[i].way}"></audio>
               </li>`;
   ulTag.insertAdjacentHTML("beforeend", liTag); //inserting the li inside ul tag
@@ -359,7 +359,7 @@ for (let i = 0; i < allMusicSecond.length; i++) {
                   <span>${allMusicSecond[i].name}</span>
                   <p>${allMusicSecond[i].artist}</p>
                 </div>
-                <span id="${allMusicSecond[i].src}" class="audio-duration"></span>
+                <span id="${allMusicSecond[i].src}" class="audio-duration">load</span>
                 <audio class="${allMusicSecond[i].src}" src="${allMusicSecond[i].way}"></audio>
               </li>`;
   ulTagSecond.insertAdjacentHTML("beforeend", liTag); //inserting the li inside ul tag
@@ -555,7 +555,7 @@ for (let i = 0; i < allMusicThird.length; i++) {
                   <span>${allMusicThird[i].name}</span>
                   <p>${allMusicThird[i].artist}</p>
                 </div>
-                <span id="${allMusicThird[i].src}" class="audio-duration"></span>
+                <span id="${allMusicThird[i].src}" class="audio-duration">load</span>
                 <audio class="${allMusicThird[i].src}" src="${allMusicThird[i].way}"></audio>
               </li>`;
   ulTagThird.insertAdjacentHTML("beforeend", liTag); //inserting the li inside ul tag
@@ -750,7 +750,7 @@ for (let i = 0; i < allMusicFourth.length; i++) {
                   <span>${allMusicFourth[i].name}</span>
                   <p>${allMusicFourth[i].artist}</p>
                 </div>
-                <span id="${allMusicFourth[i].src}" class="audio-duration"></span>
+                <span id="${allMusicFourth[i].src}" class="audio-duration">load</span>
                 <audio class="${allMusicFourth[i].src}" src="${allMusicFourth[i].way}"></audio>
               </li>`;
   ulTagFourth.insertAdjacentHTML("beforeend", liTag); //inserting the li inside ul tag
@@ -945,7 +945,7 @@ for (let i = 0; i < allMusicFifth.length; i++) {
                   <span>${allMusicFifth[i].name}</span>
                   <p>${allMusicFifth[i].artist}</p>
                 </div>
-                <span id="${allMusicFifth[i].src}" class="audio-duration"></span>
+                <span id="${allMusicFifth[i].src}" class="audio-duration">load</span>
                 <audio class="${allMusicFifth[i].src}" src="${allMusicFifth[i].way}"></audio>
               </li>`;
   ulTagFifth.insertAdjacentHTML("beforeend", liTag); //inserting the li inside ul tag
@@ -1140,7 +1140,7 @@ for (let i = 0; i < allMusicSixth.length; i++) {
                   <span>${allMusicSixth[i].name}</span>
                   <p>${allMusicSixth[i].artist}</p>
                 </div>
-                <span id="${allMusicSixth[i].src}" class="audio-duration"></span>
+                <span id="${allMusicSixth[i].src}" class="audio-duration">load</span>
                 <audio class="${allMusicSixth[i].src}" src="${allMusicSixth[i].way}"></audio>
               </li>`;
   ulTagSixth.insertAdjacentHTML("beforeend", liTag); //inserting the li inside ul tag
