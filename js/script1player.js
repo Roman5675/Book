@@ -39,9 +39,8 @@ let musicIndex = Math.floor((Math.random() * allMusic.length) + 1);
 isMusicPaused = true;
 
 window.addEventListener("load", ()=>{
-  loadSong(waySong[musicIndex - 1]);
   loadMusic(musicIndex);
-  playingSong(); 
+  playingSong();
 });
 
 //Way song
