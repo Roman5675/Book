@@ -1,27 +1,5 @@
-//Слайдер swiper
-new Swiper('.task-slider', {
-  navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-  },
-  spaceBetween: 50,
-  breakpoints: {
-      
-      1200: {
-        slidesPerView: 1,
-        
-      },
-      851: {
-        slidesPerView: 2
-      },
-      320: {
-        slidesPerView: 1
-      },
-  },
-});
-
 //Плеер 1
-const audioplayer = document.querySelector(".audioplayer-first"),
+const audioplayer = document.querySelector(".audioplayer__first"),
 musicImg = audioplayer.querySelector(".img-area img"),
 musicName = audioplayer.querySelector(".song-details .name"),
 musicArtist = audioplayer.querySelector(".song-details .artist"),
@@ -53,7 +31,6 @@ function loadSong(a) {
 
 function loadMusic(indexNumb){
   loadSong(waySong[musicIndex - 1]);
-  musicName.innerText = allMusic[indexNumb - 1].name;
   musicArtist.innerText = allMusic[indexNumb - 1].artist;
 }
 
@@ -161,7 +138,7 @@ for (let i = 0; i < allMusic.length; i++) {
   //let's pass the song name, artist from the array
   let liTag = `<li li-index="${i + 1}">
                 <div class="row">
-                  <span>${allMusic[i].name}</span>
+                <span>${allMusic[i].name}</span>
                   <p>${allMusic[i].artist}</p>
                 </div>
                 <span id="${allMusic[i].src}" class="audio-duration">3:40</span>
@@ -222,7 +199,7 @@ function clicked(element){
 }
 
 //Плеер2
-const audioplayerSecond = document.querySelector(".audioplayer-second"),
+const audioplayerSecond = document.querySelector(".audioplayer__second"),
 musicImgSecond = audioplayerSecond.querySelector(".img-area img"),
 musicNameSecond = audioplayerSecond.querySelector(".song-details .name"),
 musicArtistSecond = audioplayerSecond.querySelector(".song-details .artist"),
@@ -255,7 +232,6 @@ function loadSongSecond(a) {
 
 function loadMusicSecond(indexNumb2){
   loadSongSecond(waySongSecond[musicIndexSecond - 1]);
-  musicNameSecond.innerText = allMusicSecond[indexNumb2 - 1].name;
   musicArtistSecond.innerText = allMusicSecond[indexNumb2 - 1].artist;
 }
 
@@ -418,7 +394,7 @@ function clickedSecond(element){
 
 
 //Плеер 3
-const audioplayerThird = document.querySelector(".audioplayer-third"),
+const audioplayerThird = document.querySelector(".audioplayer__third"),
 musicImgThird = audioplayerThird.querySelector(".img-area img"),
 musicNameThird = audioplayerThird.querySelector(".song-details .name"),
 musicArtistThird = audioplayerThird.querySelector(".song-details .artist"),
@@ -451,7 +427,6 @@ function loadSongThird(a) {
 
 function loadMusicThird(indexNumb2){
   loadSongThird(waySongThird[musicIndexThird - 1]);
-  musicNameThird.innerText = allMusicThird[indexNumb2 - 1].name;
   musicArtistThird.innerText = allMusicThird[indexNumb2 - 1].artist;
 }
 
@@ -613,7 +588,7 @@ function clickedThird(element){
 }
 
 //Плеер 4
-const audioplayerFourth = document.querySelector(".audioplayer-fourth"),
+const audioplayerFourth = document.querySelector(".audioplayer__fourth"),
 musicImgFourth = audioplayerFourth.querySelector(".img-area img"),
 musicNameFourth = audioplayerFourth.querySelector(".song-details .name"),
 musicArtistFourth = audioplayerFourth.querySelector(".song-details .artist"),
@@ -646,7 +621,6 @@ function loadSongFourth(a) {
 
 function loadMusicFourth(indexNumb2){
   loadSongFourth(waySongFourth[musicIndexFourth - 1]);
-  musicNameFourth.innerText = allMusicFourth[indexNumb2 - 1].name;
   musicArtistFourth.innerText = allMusicFourth[indexNumb2 - 1].artist;
 }
 
@@ -808,7 +782,7 @@ function clickedFourth(element){
 }
 
 //Плеер 5
-const audioplayerFifth = document.querySelector(".audioplayer-fifth"),
+const audioplayerFifth = document.querySelector(".audioplayer__fifth"),
 musicImgFifth = audioplayerFifth.querySelector(".img-area img"),
 musicNameFifth = audioplayerFifth.querySelector(".song-details .name"),
 musicArtistFifth = audioplayerFifth.querySelector(".song-details .artist"),
@@ -841,7 +815,6 @@ function loadSongFifth(a) {
 
 function loadMusicFifth(indexNumb2){
   loadSongFifth(waySongFifth[musicIndexFifth - 1]);
-  musicNameFifth.innerText = allMusicFifth[indexNumb2 - 1].name;
   musicArtistFifth.innerText = allMusicFifth[indexNumb2 - 1].artist;
 }
 
@@ -1003,7 +976,7 @@ function clickedFifth(element){
 }
 
 //Плеер 6
-const audioplayerSixth = document.querySelector(".audioplayer-sixth"),
+const audioplayerSixth = document.querySelector(".audioplayer__sixth"),
 musicImgSixth = audioplayerSixth.querySelector(".img-area img"),
 musicNameSixth = audioplayerSixth.querySelector(".song-details .name"),
 musicArtistSixth = audioplayerSixth.querySelector(".song-details .artist"),
@@ -1036,7 +1009,6 @@ function loadSongSixth(a) {
 
 function loadMusicSixth(indexNumbSixth){
   loadSongSixth(waySongSixth[musicIndexSixth - 1]);
-  musicNameSixth.innerText = allMusicSixth[indexNumbSixth - 1].name;
   musicArtistSixth.innerText = allMusicSixth[indexNumbSixth - 1].artist;
 }
 
