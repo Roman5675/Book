@@ -4,8 +4,29 @@
     #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$addWidth}));
 }
 //Шрифт
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+@font-face {
+    font-family: 'SF UI Text';
+    src: url("../fonts/SFUIText-Light.ttf");
+    src: local("O"), url("../fonts/SFUIText-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'SF UI Text';
+	src: url("../fonts/SFUIText-Regular.ttf");
+	src: local("O"), url("../fonts/SFUIText-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SF UI Text';
+	src: url("../fonts/SFUIText-Bold.ttf");
+	src: local("O"), url("../fonts/SFUIText-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
 
 // Файл обнуляющих стилей
 @import "nullstyle.scss";
@@ -18,9 +39,9 @@ html {
 }
 
 body{
-    font-family: 'Montserrat';
-    font-style: normal;
+    font-family: 'SF UI Text';
     font-weight: 400;
+    font-style: normal;
     color: #FFF;
     display: flex;
     flex-direction: column;
@@ -196,12 +217,12 @@ main {
 .audioplayer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 200px;
+    align-items: end;
+    gap: 250px;
     margin-top: 107px;
     margin-bottom: 300px;
     @media (max-width: 1920px) {
-        @include adaptive-value( gap , 200 , 60 , 1920 , 320 );
+        @include adaptive-value( gap , 250 , 60 , 1920 , 320 );
         @include adaptive-value( margin-top , 107 , 0 , 1920 , 320 );
         @include adaptive-value( margin-bottom , 300 , 100 , 1920 , 320 );
     }
@@ -356,16 +377,21 @@ main {
     border-radius: 50px;
     background: #f0f0f0;
     cursor: pointer;
+    @media (max-width: 1920px) {
+        @include adaptive-value( height , 6 , 3 , 1920 , 320 );
+    }
     @media (max-width: 1150px) {
         @include adaptive-value( width , 766 , 100 , 1150 , 320 );
-        display: none;
+        transform: rotate(-90deg);
+        transform-origin: left bottom;
+        @include adaptive-value( left , 820 , 307 , 1150 , 320 );
+        @include adaptive-value( width , 995 , 379 , 1150 , 320 );
     }
 }
 
 .player__image {
-    display: flex;
     position: relative;
-    justify-content: right;
+    display: flex;
     background: #000;
     border-radius: 0px 0px 80px 0px;
 }
@@ -409,9 +435,12 @@ main {
 }
 
 .song-timer span{
-    margin-top: 5px;
-    font-size: 13px;
+    margin-top: 15px;
+    font-size: 32px;
     color: #ffffff;
+    @media (max-width: 1150px) {
+        display: none;
+    }
 }
 
 .controls{
@@ -487,6 +516,7 @@ main {
     font-weight: 400;
     line-height: 124.7%; /* 65.218px */
     text-transform: lowercase;
+    white-space: nowrap;
     @media (max-width: 1920px) {
         @include adaptive-value( font-size , 53 , 13 , 1920 , 320 );
     }
