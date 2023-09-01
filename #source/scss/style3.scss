@@ -216,47 +216,42 @@ main {
 //Section footer end
 
 //плеер 
+
+.listen__list {
+    display: flex;
+    justify-content: center;
+    gap: 109px;
+    background: #6BD6D0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    a {
+        color: #000;
+        font-size: 27px;
+        line-height: 124.7%; /* 34.242px */
+        text-transform: lowercase;
+        @media (max-width: 1920px) {
+            @include adaptive-value( font-size , 27 , 14 , 1920 , 320 );
+        }
+    }
+    @media (max-width: 1920px) {
+        @include adaptive-value( gap , 109 , 56 , 1920 , 320 );
+        @include adaptive-value( padding-top , 50 , 25 , 1920 , 320 );
+        @include adaptive-value( padding-bottom , 50 , 25 , 1920 , 320 );
+    }
+}
+
 .audioplayer {
     display: flex;
     flex-direction: column;
     align-items: end;
     gap: 250px;
-    margin-top: 107px;
+    margin-top: 215px;
     margin-bottom: 300px;
     @media (max-width: 1920px) {
         @include adaptive-value( gap , 250 , 60 , 1920 , 320 );
-        @include adaptive-value( margin-top , 107 , 0 , 1920 , 320 );
+        @include adaptive-value( margin-top , 215 , 0 , 1920 , 320 );
         @include adaptive-value( margin-bottom , 300 , 100 , 1920 , 320 );
     }
-}
-
-.audioplayer__main-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 145px;
-    height: 145px;
-    border-radius: 50%;
-    background-color: #6BD6D0;
-    margin-top: 81px;
-    margin: 0px auto;
-    p {
-        color: #000;
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 124.7%; /* 35.577px */
-        text-transform: lowercase;
-        @media (max-width: 1920px) {
-            @include adaptive-value( font-size , 28 , 10 , 1920 , 320 );
-        }
-    }
-    @media (max-width: 1920px) {
-        @include adaptive-value( width , 145 , 51 , 1920 , 320 );
-        @include adaptive-value( height , 145 , 51 , 1920 , 320 );
-        @include adaptive-value( margin-top , 81 , 15 , 1920 , 320 );
-    }
-    
 }
 
 .audio {
@@ -383,6 +378,7 @@ main {
         @include adaptive-value( height , 6 , 3 , 1920 , 320 );
     }
     @media (max-width: 1150px) {
+        display: none;
         @include adaptive-value( width , 766 , 100 , 1150 , 320 );
         transform: rotate(-90deg);
         transform-origin: left bottom;
@@ -510,6 +506,13 @@ main {
 
 .music-list ul li:last-child{
     margin-bottom: 0px;
+}
+
+.music-list ul li:first-child{
+    margin-top: 0;
+    @media (max-width: 1920px) {
+        @include adaptive-value( margin-top , 0 , 32 , 1920 , 320 );
+    }
 }
 
   
