@@ -132,6 +132,7 @@ img {
 main {
   background: -webkit-gradient(linear, left top, left bottom, from(#060407), color-stop(18.75%, #7C485D), color-stop(30.73%, #B2989F), color-stop(54.17%, #213549), color-stop(70.31%, #6399AA), color-stop(82.29%, #79337D), to(#140A10));
   background: linear-gradient(180deg, #060407 0%, #7C485D 18.75%, #B2989F 30.73%, #213549 54.17%, #6399AA 70.31%, #79337D 82.29%, #140A10 100%);
+  background-repeat: no-repeat;
 }
 
 .wrapper {
@@ -164,9 +165,6 @@ main {
           align-items: center;
   max-width: 1920px;
   margin: 0px auto;
-  background: -webkit-gradient(linear, left top, left bottom, from(#060407), color-stop(18.75%, #7C485D), color-stop(30.73%, #B2989F), color-stop(54.17%, #213549), color-stop(70.31%, #6399AA), color-stop(82.29%, #79337D), to(#140A10));
-  background: linear-gradient(180deg, #060407 0%, #7C485D 18.75%, #B2989F 30.73%, #213549 54.17%, #6399AA 70.31%, #79337D 82.29%, #140A10 100%);
-  background-repeat: no-repeat;
 }
 @media (max-width: 1150px) {
   .listen__column {

@@ -58,6 +58,7 @@ img{
 
 main {
     background: linear-gradient(180deg, #060407 0%, #7C485D 18.75%, #B2989F 30.73%, #213549 54.17%, #6399AA 70.31%, #79337D 82.29%, #140A10 100%);
+    background-repeat: no-repeat;
 }
 
 .wrapper {
@@ -81,8 +82,6 @@ main {
     align-items: center;
     max-width: 1920px;
     margin: 0px auto;
-    background: linear-gradient(180deg, #060407 0%, #7C485D 18.75%, #B2989F 30.73%, #213549 54.17%, #6399AA 70.31%, #79337D 82.29%, #140A10 100%);
-    background-repeat: no-repeat;
     @media (max-width: 1150px) {
         align-items: end;
         overflow: hidden;
