@@ -249,7 +249,7 @@ main {
     margin-bottom: 300px;
     @media (max-width: 1920px) {
         @include adaptive-value( gap , 250 , 60 , 1920 , 320 );
-        @include adaptive-value( margin-top , 215 , 0 , 1920 , 320 );
+        @include adaptive-value( margin-top , 215 , 30 , 1920 , 320 );
         @include adaptive-value( margin-bottom , 300 , 100 , 1920 , 320 );
     }
 }
@@ -294,6 +294,8 @@ main {
 }
 
 .player {
+    display: flex;
+    align-items: center;
     padding-left: 164px;
     padding-right: 0px;
     width: auto;
@@ -360,7 +362,7 @@ main {
     }
     @media (max-width: 1150px) {
         @include adaptive-value( left , 70 , 95 , 1150 , 320 );
-        @include adaptive-value( bottom , -738 , -68 , 1150 , 320 );
+        @include adaptive-value( bottom , -716 , -68 , 1150 , 320 );
     }
     
 }
@@ -378,8 +380,6 @@ main {
         @include adaptive-value( height , 6 , 3 , 1920 , 320 );
     }
     @media (max-width: 1150px) {
-        display: none;
-        @include adaptive-value( width , 766 , 100 , 1150 , 320 );
         transform: rotate(-90deg);
         transform-origin: left bottom;
         @include adaptive-value( left , 900 , 339 , 1150 , 320 );
@@ -508,14 +508,6 @@ main {
     margin-bottom: 0px;
 }
 
-.music-list ul li:first-child{
-    margin-top: 0;
-    @media (max-width: 1920px) {
-        @include adaptive-value( margin-top , 0 , 32 , 1920 , 320 );
-    }
-}
-
-  
 .music-list ul li .row span{
     font-size: 53px;
     font-weight: 400;

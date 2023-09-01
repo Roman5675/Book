@@ -395,7 +395,7 @@ main {
 @media (max-width: 1920px) {
   .audioplayer {
     gap: calc(60px + 190 * ((100vw - 320px) / 1600));
-    margin-top: calc(0px + 215 * ((100vw - 320px) / 1600));
+    margin-top: calc(30px + 185 * ((100vw - 320px) / 1600));
     margin-bottom: calc(100px + 200 * ((100vw - 320px) / 1600));
   }
 }
@@ -450,6 +450,12 @@ main {
 }
 
 .player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-left: 164px;
   padding-right: 0px;
   width: auto;
@@ -538,7 +544,7 @@ main {
 @media (max-width: 1150px) {
   .controls .play-pause {
     left: calc(95px + -25 * ((100vw - 320px) / 830));
-    bottom: calc(-68px + -670 * ((100vw - 320px) / 830));
+    bottom: calc(-68px + -648 * ((100vw - 320px) / 830));
   }
 }
 
@@ -559,8 +565,6 @@ main {
 }
 @media (max-width: 1150px) {
   .progress-area {
-    display: none;
-    width: calc(100px + 666 * ((100vw - 320px) / 830));
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
     -webkit-transform-origin: left bottom;
@@ -703,15 +707,6 @@ main {
 
 .music-list ul li:last-child {
   margin-bottom: 0px;
-}
-
-.music-list ul li:first-child {
-  margin-top: 0;
-}
-@media (max-width: 1920px) {
-  .music-list ul li:first-child {
-    margin-top: calc(32px + -32 * ((100vw - 320px) / 1600));
-  }
 }
 
 .music-list ul li .row span {
