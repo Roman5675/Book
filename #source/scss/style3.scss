@@ -199,6 +199,9 @@ main {
     font-size: 32px;
     line-height: 124.7%;
     font-weight: 300;
+    @media (max-width: 1920px) {
+        @include adaptive-value( font-size , 32 , 18 , 1920 , 320 );
+    }
 }
 
 .footer__line {
@@ -384,7 +387,7 @@ main {
         @include adaptive-value( width , 766 , 100 , 1150 , 320 );
         transform: rotate(-90deg);
         transform-origin: left bottom;
-        @include adaptive-value( left , 820 , 307 , 1150 , 320 );
+        @include adaptive-value( left , 900 , 339 , 1150 , 320 );
         @include adaptive-value( width , 995 , 379 , 1150 , 320 );
     }
 }
@@ -393,7 +396,7 @@ main {
     position: relative;
     display: flex;
     background: #000;
-    border-radius: 0px 0px 80px 0px;
+    border-radius: 0px 0px 250px 0px;
 }
 
 .player__image img {
