@@ -284,6 +284,7 @@ img{
 
 //Form start
 .form {
+    display: none;
     padding-top: 100px;
     padding-left: 228px;
     padding-right: 228px;
@@ -442,6 +443,7 @@ textarea.form__input {
     flex-direction: column;
     gap: 79px;
     flex-wrap: wrap;
+    margin-top: 300px;
     margin-left: 110px;
     margin-right: 110px;
     margin-bottom: 128px;
@@ -449,6 +451,7 @@ textarea.form__input {
         @include adaptive-value( margin-left , 110 , 15 , 1920 , 320 );
         @include adaptive-value( margin-right , 110 , 15 , 1920 , 320 );
         @include adaptive-value( gap ,79  , 16 ,1920  ,320  );
+        @include adaptive-value( margin-top , 300 , 100 , 1920 , 320 );
         @include adaptive-value( margin-bottom , 128 , 30 , 1920 , 320 );
     }
     @media (max-width: 700px) {
@@ -463,15 +466,6 @@ textarea.form__input {
         }
         
     }
-}
-
-.footer__link {
-    color: #FFF;
-    &:hover {
-        color: rgba(224, 220, 220, 0.5);  
-    }
-    font-size: 32px;
-    line-height: 124.7%;
 }
 
 .footer__text {

@@ -4,6 +4,31 @@
     #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$addWidth}));
 }
 //Шрифт
+@font-face {
+    font-family: 'SF UI Text';
+    src: url("../fonts/SFUIText-Light.ttf");
+    src: local("O"), url("../fonts/SFUIText-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'SF UI Text';
+	src: url("../fonts/SFUIText-Regular.ttf");
+	src: local("O"), url("../fonts/SFUIText-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SF UI Text';
+	src: url("../fonts/SFUIText-Bold.ttf");
+	src: local("O"), url("../fonts/SFUIText-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 // Файл обнуляющих стилей
@@ -38,123 +63,116 @@ img{
 
 @media (max-width: 0px) {}
 
-.title {
-    text-align: center;
-    font-weight: 500;
-    text-transform: uppercase;
-    line-height: 124.7%;
-}
-//Section welcome start
-.welcome__column {
-    display: flex;
-    flex-direction: column;
-    max-width: 1920px;
-    margin: 0px auto;
-    background: linear-gradient(180deg, #213549 9.90%, #6399AA 34.90%, #79337D 68.23%, #140A10 93.67%), #FFF;
-    background-repeat: no-repeat;
+//Section header start
+
+.header {
+    background: linear-gradient(88deg, #6120F0 5.99%, #572659 98.51%);
 }
 
-.welcome__text {
+.header__list {
     display: flex;
-    flex-direction: column;
-}
-
-.welcome__title {
-    font-size: 90px;
-    padding-top: 150px;
-    padding-left: 122px;
-    padding-right: 122px;
-    padding-bottom: 150px;
-    @media (max-width: 1920px) {
-        @include adaptive-value( font-size , 90 , 32 , 1920 , 320 );
-        @include adaptive-value( padding-top , 150 , 30 , 1920 , 320 );
-        @include adaptive-value( padding-left , 122 , 15 , 1920 , 320 );
-        @include adaptive-value( padding-right , 122 , 15 , 1920 , 320 );
-        @include adaptive-value( padding-bottom , 150 , 30 , 1920 , 320 );
-    }
-}
-.welcome__intro {
-    font-size: 54px;
-    padding-left: 122px;
-    padding-right: 122px;
-    padding-bottom: 216px;
-    @media (max-width: 1920px) {
-        @include adaptive-value( font-size , 54 , 16 , 1920 , 320 );
-        @include adaptive-value( padding-left , 122 , 15 , 1920 , 320 );
-        @include adaptive-value( padding-right , 122 , 15 , 1920 , 320 );
-        @include adaptive-value( padding-bottom , 216 , 30 , 1920 , 320 );
-    }
-    & p:first-child{
-        padding-bottom: 216px;
+    gap: 109px;
+    padding-top: 80px;
+    padding-bottom: 86px;
+    padding-left: 386px;
+    a {
+        color: #FFF;
+        font-family: SF UI Text;
+        font-size: 27px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 124.7%; /* 33.534px */
+        text-transform: lowercase;
         @media (max-width: 1920px) {
-            @include adaptive-value( padding-bottom , 216 , 30 , 1920 , 320 );
+            @include adaptive-value( font-size , 27 , 14 , 1920 , 320 );
         }
     }
-}
-.welcome__bio {
-    font-size: 54px;
-    padding-left: 30px;
-    padding-right: 30px;
     @media (max-width: 1920px) {
-        @include adaptive-value( font-size , 54 , 16 , 1920 , 320 );
-        @include adaptive-value( padding-left , 30 , 15 , 1920 , 320 );
-        @include adaptive-value( padding-right , 30 , 15 , 1920 , 320 );
-    }
-    p {
-        padding-bottom: 200px;
-        @media (max-width: 1920px) {
-            @include adaptive-value( padding-bottom , 200 , 30 , 1920 , 320 );
-        }
-    }
-}
-//Section welcome end
-
-//Section button start
-.first-button {
-    margin-bottom: 91px;
-    @media (max-width: 1920px) {
-        @include adaptive-value( margin-bottom , 91 , 30 , 1920 , 320 );
+        @include adaptive-value( gap , 109 , 56 , 1920 , 320 );
+        @include adaptive-value( padding-top , 80 , 25 , 1920 , 320 );
+        @include adaptive-value( padding-bottom , 86 , 25 , 1920 , 320 );
+        @include adaptive-value( padding-left , 386 , 35 , 1920 , 320 );
     }
 }
 
-.second-button {
-    margin-bottom: 306px;
-    @media (max-width: 1920px) {
-        @include adaptive-value( margin-bottom , 306 , 30 , 1920 , 320 );
-    }
-}
-
-.button {
+.header__intro {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 170px;
-    border-radius: 87px;
-    background: #7DF9FF;
-    &:hover {
-        background: rgba(224, 220, 220, 0.5);  
-    }
-    margin-left: 150px;
-    margin-right: 150px;
+    gap: 112px;
+    padding-left: 386px;
+    padding-right: 200px;
+    padding-bottom: 106px;
     @media (max-width: 1920px) {
-        @include adaptive-value(margin-left  , 150 , 15 , 1920 , 320 );
-        @include adaptive-value(margin-right  , 150 , 15 , 1920 , 320 );
-        @include adaptive-value( height , 170 , 50 , 1920 , 320 );
-    }
-    p {
-        color: #000;
-        font-family: EB Garamond;
-        font-size: 64px;
-        font-weight: 800;
-        line-height: 124.7%;
-        text-transform: uppercase;
-        @media (max-width: 1920px) {
-            @include adaptive-value( font-size , 64 , 16 , 1920 , 320 );
-        }
+        @include adaptive-value( gap , 112 , 23 , 1920 , 320 );
+        @include adaptive-value( padding-left , 386 , 35 , 1920 , 320 );
+        @include adaptive-value( padding-bottom , 106 , 22 , 1920 , 320 );
+        @include adaptive-value( padding-right , 200 , 27 , 1920 , 320 );
     }
 }
-//Section button end
 
+.header__intro-title {
+    color: #686BF4;
+    font-family: SF UI Display;
+    font-size: 98px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 124.7%; /* 123.292px */
+    @media (max-width: 1920px) {
+        @include adaptive-value( font-size , 98 , 21 , 1920 , 320 );
+    }
+}
+.header__intro-subtitle {
+    color: #FFF;
+    font-family: SF UI Display;
+    font-size: 98px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 124.7%; /* 123.292px */
+    @media (max-width: 1920px) {
+        @include adaptive-value( font-size , 98 , 21 , 1920 , 320 );
+    }
+}
+
+//Section header end
+
+//Section book start
+
+//Section book end
+.book {
+    padding-top: 93px;
+    padding-right: 150px;
+    padding-bottom: 93px;
+    padding-left: 150px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( padding-top , 93 , 44 , 1920 , 320 );
+        @include adaptive-value( padding-right , 150 , 34 , 1920 , 320 );
+        @include adaptive-value( padding-bottom , 93 , 44 , 1920 , 320 );
+        @include adaptive-value( padding-left , 150 , 34 , 1920 , 320 );
+    }
+}
+
+.book__title {
+    color: #000;
+    font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 124.7%; /* 44.892px */
+    text-transform: lowercase;
+    margin-bottom: 100px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( margin-bottom , 80 , 40 , 1920 , 320 );
+    }
+}
+.book__text {
+    color: #000;
+    font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 124.7%; /* 44.892px */
+    text-transform: lowercase;
+    text-align: justify;
+}
 //Section footer start
 .footer__column {
     display: flex;
@@ -192,23 +210,13 @@ img{
     }
 }
 
-.footer__link {
-    color: #FFF;
-    &:hover {
-        color: rgba(224, 220, 220, 0.5);  
-    }
-    font-size: 32px;
-    line-height: 124.7%;
-}
-
 .footer__text {
-    color: #FFF;
-    font-size: 32px;
+    color: #000;
+    font-size: 62px;
     line-height: 124.7%;
     font-weight: 300;
     @media (max-width: 1920px) {
-        @include adaptive-value( font-size , 32 , 18 , 1920 , 320 );
+        @include adaptive-value( font-size , 62 , 18 , 1920 , 320 );
     }
 }
 //Section footer end
-
