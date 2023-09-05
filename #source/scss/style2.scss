@@ -159,41 +159,36 @@ img{
 .footer__column {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.footer__list-top {
-    display: flex;
-    justify-content: center;
-    gap: 106px;
-    flex-wrap: wrap;
-    margin-bottom: 147px;
-    @media (max-width: 1920px) {
-        @include adaptive-value( gap ,106  , 16 ,1920  ,320  );
-        @include adaptive-value( margin-bottom , 147 , 30 , 1920 , 320 );
-    }
-    @media (max-width: 700px) {
-        flex-direction: column;
-        align-items: center;
-    }
-}
 
 .footer__list-bottom {
     display: flex;
-    justify-content: space-between;
-    gap: 106px;
+    align-items: center;
+    flex-direction: column;
+    gap: 79px;
     flex-wrap: wrap;
     margin-left: 110px;
     margin-right: 110px;
-    margin-bottom: 147px;
+    margin-bottom: 128px;
     @media (max-width: 1920px) {
         @include adaptive-value( margin-left , 110 , 15 , 1920 , 320 );
         @include adaptive-value( margin-right , 110 , 15 , 1920 , 320 );
-        @include adaptive-value( gap ,106  , 16 ,1920  ,320  );
-        @include adaptive-value( margin-bottom , 147 , 30 , 1920 , 320 );
+        @include adaptive-value( gap ,79  , 16 ,1920  ,320  );
+        @include adaptive-value( margin-bottom , 128 , 30 , 1920 , 320 );
     }
     @media (max-width: 700px) {
         flex-direction: column;
         align-items: center;
+    }
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+        li:nth-child(3) {
+            display: none;
+        }
+        
     }
 }
 
@@ -202,29 +197,17 @@ img{
     &:hover {
         color: rgba(224, 220, 220, 0.5);  
     }
-    font-family: PT Sans Narrow;
     font-size: 32px;
     line-height: 124.7%;
 }
 
 .footer__text {
     color: #FFF;
-    font-family: PT Sans Narrow;
     font-size: 32px;
     line-height: 124.7%;
-}
-
-.footer__line {
-    width: auto;
-    height: 1px;
-    background: rgba(217, 217, 217, 0.70);
-    margin-left: 110px;
-    margin-right: 110px;
-    margin-bottom: 147px;
+    font-weight: 300;
     @media (max-width: 1920px) {
-        @include adaptive-value( margin-left , 110 , 15 , 1920 , 320 );
-        @include adaptive-value( margin-right , 110 , 15 , 1920 , 320 );
-        @include adaptive-value( margin-bottom , 147 , 30 , 1920 , 320 );
+        @include adaptive-value( font-size , 32 , 18 , 1920 , 320 );
     }
 }
 //Section footer end
