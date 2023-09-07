@@ -1,5 +1,25 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+@font-face {
+  font-family: "SF UI Text";
+  src: url("../fonts/SFUIText-Light.ttf");
+  src: local("O"), url("../fonts/SFUIText-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF UI Text";
+  src: url("../fonts/SFUIText-Regular.ttf");
+  src: local("O"), url("../fonts/SFUIText-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF UI Text";
+  src: url("../fonts/SFUIText-Bold.ttf");
+  src: local("O"), url("../fonts/SFUIText-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 /*Обнуление*/
 * {
   padding: 0;
@@ -85,7 +105,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat";
+  font-family: "SF UI Text";
   font-style: normal;
   font-weight: 400;
   color: #FFF;
@@ -176,18 +196,13 @@ img {
 
 .crime__title {
   color: #C3FB50;
-  font-family: EB Garamond;
   font-size: 94px;
-  font-style: normal;
   font-weight: 800;
   line-height: 124.7%; /* 117.613px */
   text-transform: uppercase;
 }
 .crime__title span {
-  color: #FFF;
-  font-family: EB Garamond;
   font-size: 54px;
-  font-style: normal;
   font-weight: 800;
   line-height: 124.7%; /* 67.717px */
   text-transform: uppercase;
@@ -248,12 +263,12 @@ img {
   border-radius: 181.813px;
   background: #6120F0;
 }
+.crime__button:hover {
+  background: rgba(216, 210, 210, 0.5);
+}
 .crime__button p {
   color: #FFF;
-  font-family: EB Garamond;
   font-size: 46px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 124.7%; /* 58.115px */
   text-transform: uppercase;
 }
@@ -335,23 +350,20 @@ img {
 .card__middle-first-text h2 {
   position: absolute;
   left: 750px;
-  bottom: 258px;
+  bottom: 228px;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   -webkit-transform-origin: left;
           transform-origin: left;
   color: #6BD6D0;
-  font-family: Basis Grotesque Pro;
   font-size: 95px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 124.7%; /* 119.401px */
   text-transform: lowercase;
 }
 @media (max-width: 1920px) {
   .card__middle-first-text h2 {
     left: calc(140px + 610 * ((100vw - 320px) / 1600));
-    bottom: calc(54px + 204 * ((100vw - 320px) / 1600));
+    bottom: calc(54px + 174 * ((100vw - 320px) / 1600));
     font-size: calc(18px + 77 * ((100vw - 320px) / 1600));
   }
 }
@@ -361,15 +373,10 @@ img {
   left: 733px;
   bottom: 50px;
   color: #FFF;
-  font-family: Basis Grotesque Pro;
   font-size: 50px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 124.7%; /* 63.37px */
+  line-height: 124.7%;
   text-transform: uppercase;
-}
-.card__middle-second-text p:hover {
-  color: #6BD6D0;
 }
 @media (max-width: 1920px) {
   .card__middle-second-text p {
@@ -389,13 +396,11 @@ img {
   }
 }
 .card__right h2 {
-  color: #FFF;
-  font-family: EB Garamond;
   font-size: 64px;
-  font-style: normal;
   font-weight: 600;
   line-height: 124.7%; /* 80.853px */
   text-transform: uppercase;
+  color: #FFF;
   position: absolute;
   top: 550px;
   left: 140px;
@@ -656,7 +661,6 @@ textarea.form__input {
 }
 
 .footer__text {
-  color: #FFF;
   font-size: 62px;
   line-height: 124.7%;
   font-weight: 300;

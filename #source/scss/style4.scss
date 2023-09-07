@@ -1,0 +1,239 @@
+@mixin adaptive-value($property, $startSize ,$minSize, $maxWidth, $minWidth) {
+    $addSize: $startSize - $minSize;
+    $addWidth: $maxWidth - $minWidth;
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$addWidth}));
+}
+//Шрифт
+@font-face {
+    font-family: 'SF UI Text';
+    src: url("../fonts/SFUIText-Light.ttf");
+    src: local("O"), url("../fonts/SFUIText-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'SF UI Text';
+	src: url("../fonts/SFUIText-Regular.ttf");
+	src: local("O"), url("../fonts/SFUIText-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SF UI Text';
+	src: url("../fonts/SFUIText-Bold.ttf");
+	src: local("O"), url("../fonts/SFUIText-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'SF UI Text';
+    font-weight: 400;
+    font-style: normal;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    background: linear-gradient(180deg, #213549 0%, #6399AA 27.6%, #79337D 68.23%, #140A10 100%), #FFF;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+//Section buy start
+.buy__column {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+}
+
+.buy__menu {
+    position: absolute;
+    text-align: center;
+    left: 720px;
+    z-index: 20;
+    @media (max-width: 1920px) {
+        @include adaptive-value( left , 720 , 30 , 1920 , 320 );
+    }
+}
+
+.buy__list {
+    display: flex;
+    justify-content: center;
+    gap: 109px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    a {
+        color: #FFF;
+        font-size: 27px;
+        line-height: 124.7%; /* 34.242px */
+        text-transform: lowercase;
+        @media (max-width: 1920px) {
+            @include adaptive-value( font-size , 27 , 14 , 1920 , 320 );
+        }
+    }
+    @media (max-width: 1920px) {
+        @include adaptive-value( gap , 109 , 56 , 1920 , 320 );
+        @include adaptive-value( padding-top , 50 , 25 , 1920 , 320 );
+        @include adaptive-value( padding-bottom , 50 , 25 , 1920 , 320 );
+    }
+}
+//Section buy end
+
+
+//Section intro start
+.intro {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.intro__title {
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 124.7%; /* 36.541px */
+    text-transform: uppercase;
+}
+.intro__subtitle {
+    position: absolute;
+    top: 218px;
+    left: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 124.7%; /* 17.458px */
+    text-transform: uppercase;
+}
+//Section intro end
+
+//Section cards start
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    
+}
+
+.cards__card {
+    max-width: 240px;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.cards__left {
+    margin-left: 55px;
+    margin-right: 15px;
+}
+
+.cards__right {
+    margin-right: 55px;
+    margin-left: 15px;
+}
+
+.cards__line {
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    background: #050505;
+}
+
+.cards__image {
+    img {
+        border-radius: 10px 10px 0px 0px;
+    }
+}
+
+.cards__text {
+    background-color: #030303;
+    border-radius: 0px 0px 10px 10px;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 124.7%; /* 13.717px */
+    letter-spacing: -0.22px;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+//Section cards end
+
+.buy__book {
+    text-align: center;
+    margin-top: 38px;
+}
+
+//Section footer start
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer__list-bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 79px;
+    flex-wrap: wrap;
+    margin-top: 300px;
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-bottom: 128px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( margin-left , 110 , 15 , 1920 , 320 );
+        @include adaptive-value( margin-right , 110 , 15 , 1920 , 320 );
+        @include adaptive-value( gap ,79  , 16 ,1920  ,320  );
+        @include adaptive-value( margin-top , 300 , 50 , 1920 , 320 );
+        @include adaptive-value( margin-bottom , 128 , 30 , 1920 , 320 );
+    }
+    @media (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+    }
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+        li:nth-child(3) {
+            display: none;
+        }
+        
+    }
+}
+
+.footer__text {
+    font-size: 62px;
+    line-height: 124.7%;
+    font-weight: 300;
+    @media (max-width: 1920px) {
+        @include adaptive-value( font-size , 62 , 14 , 1920 , 320 );
+    }
+}
+//Section footer end
