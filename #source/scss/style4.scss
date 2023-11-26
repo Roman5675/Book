@@ -5,6 +5,46 @@
 }
 //Шрифт
 @font-face {
+    font-family: 'DaMiOne';
+    src: url("../fonts/DaMiOne-Regular.ttf");
+    src: local("O"), url("../fonts/DaMiOne-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url("../fonts/SFUIDisplay-Ultralight.ttf");
+    src: local("O"), url("../fonts/SFUIDisplay-Ultralight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url("../fonts/SFUIDisplay-Light.ttf");
+    src: local("O"), url("../fonts/SFUIDisplay-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url("../fonts/SFUIDisplay-Regular.ttf");
+    src: local("O"), url("../fonts/SFUIDisplay-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF UI Display';
+    src: url("../fonts/SFUIDisplay-Medium.ttf");
+    src: local("O"), url("../fonts/SFUIDisplay-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'SF UI Text';
     src: url("../fonts/SFUIText-Light.ttf");
     src: local("O"), url("../fonts/SFUIText-Light.ttf") format("truetype");
@@ -74,32 +114,31 @@ main {
 
 .buy__menu {
     position: absolute;
-    text-align: center;
-    left: 720px;
+    left: 520px;
     z-index: 20;
     @media (max-width: 1920px) {
-        @include adaptive-value( left , 720 , 30 , 1920 , 320 );
+        @include adaptive-value( left , 520 , 30 , 1920 , 320 );
     }
 }
 
 .buy__list {
     display: flex;
     justify-content: center;
-    gap: 109px;
-    padding-top: 50px;
+    gap: 191px;
+    padding-top: 40px;
     padding-bottom: 50px;
     a {
         color: #FFF;
-        font-size: 27px;
+        font-size: 49px;
         line-height: 124.7%; /* 34.242px */
         text-transform: lowercase;
         @media (max-width: 1920px) {
-            @include adaptive-value( font-size , 27 , 14 , 1920 , 320 );
+            @include adaptive-value( font-size , 49 , 14 , 1920 , 320 );
         }
     }
     @media (max-width: 1920px) {
-        @include adaptive-value( gap , 109 , 56 , 1920 , 320 );
-        @include adaptive-value( padding-top , 50 , 25 , 1920 , 320 );
+        @include adaptive-value( gap , 191 , 54 , 1920 , 320 );
+        @include adaptive-value( padding-top , 40 , 25 , 1920 , 320 );
         @include adaptive-value( padding-bottom , 50 , 25 , 1920 , 320 );
     }
 }
@@ -109,85 +148,242 @@ main {
 //Section intro start
 .intro {
     display: flex;
-    justify-content: center;
+    
     position: relative;
+    background: #050505;
+}
+
+.intro__image {
+    margin-left: 160px;
+    margin-right: 120px;
+    margin-top: 45px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( margin-left , 160 , 0 , 1920 , 320 );
+        @include adaptive-value( margin-top , 45 , 0 , 1920 , 320 );
+    }
+    @media (max-width: 1316px) {
+        @include adaptive-value( margin-right , 120 , 30 , 1300 , 320 );
+    }
 }
 
 .intro__title {
     position: absolute;
-    top: 70px;
-    left: 20px;
-    font-size: 20px;
+    top: 250px;
+    left: 865px;
+    font-family: 'SF UI Display';
+    font-size: 103px;
     font-weight: 200;
     line-height: 124.7%; /* 36.541px */
     text-transform: uppercase;
+    @media (max-width: 1920px) {
+        @include adaptive-value( font-size , 103 , 29 , 1920 , 320 );
+        @include adaptive-value( top , 250 , 67 , 1920 , 320 );
+        @include adaptive-value( left , 865 , 20 , 1920 , 320 );
+    }
 }
 .intro__subtitle {
     position: absolute;
-    top: 218px;
-    left: 20px;
-    font-size: 14px;
+    bottom: 50px;
+    left: 868px;
+    font-family: 'SF UI Display';
+    font-size: 49px;
     font-weight: 300;
     line-height: 124.7%; /* 17.458px */
     text-transform: uppercase;
-}
-//Section intro end
-
-//Section cards start
-.cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-    
-}
-
-.cards__card {
-    max-width: 240px;
-    border-radius: 30px;
-    z-index: 1;
-}
-
-.cards__left {
-    margin-left: 55px;
-    margin-right: 15px;
-}
-
-.cards__right {
-    margin-right: 55px;
-    margin-left: 15px;
-}
-
-.cards__line {
-    position: absolute;
-    height: 80px;
-    width: 100%;
-    background: #050505;
-}
-
-.cards__image {
-    img {
-        border-radius: 10px 10px 0px 0px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( font-size , 49 , 14 , 1920 , 320 );
+        @include adaptive-value( bottom , 50 , 30 , 1920 , 320 );
+        @include adaptive-value( left , 868 , 20 , 1920 , 320 );
     }
 }
 
-.cards__text {
-    background-color: #030303;
-    border-radius: 0px 0px 10px 10px;
-    font-size: 11px;
-    font-weight: 300;
-    line-height: 124.7%; /* 13.717px */
-    letter-spacing: -0.22px;
+.intro__text {
+    text-align: center;
+    font-family: 'SF UI Display';
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 124.7%; /* 47.386px */
+    letter-spacing: -0.76px;
     text-transform: uppercase;
-    padding: 10px;
+    background: #050505;
+    padding-top: 138px;
+    padding-right: 0px;
+    padding-bottom: 37px;
+    padding-left: 160px;
+    padding-right: 160px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( font-size , 38 , 14 , 1920 , 320 );
+        @include adaptive-value( padding-top , 138 , 15 , 1920 , 320 );
+        @include adaptive-value( padding-bottom , 37 , 15 , 1920 , 320 );
+        @include adaptive-value( padding-left , 160 , 15 , 1920 , 320 );
+        @include adaptive-value( padding-right , 160 , 15 , 1920 , 320 );
+    }
+}
+//Section intro end
+
+//Section desktop-cards start
+.desktop-cards__first-row {
+    text-align: center;
+}
+.desktop-cards__second-row {
+    display: flex;
+    flex-direction: row;
+    gap: 98px;
+    justify-content: center;
+    padding-top: 0px;
+    padding-right: 35px;
+    padding-bottom: 0px;
+    padding-left: 35px;
+    @media (max-width: 1000px) {
+        flex-direction: column;
+    }
+    img {
+        border-radius: 7px;
+        background: #200D23;
+        box-shadow: 0px 24px 53px 0px rgba(0, 0, 0, 0.49), 0px 97px 97px 0px rgba(0, 0, 0, 0.42), 0px 218px 131px 0px rgba(0, 0, 0, 0.25), 0px 387px 155px 0px rgba(0, 0, 0, 0.07), 0px 604px 169px 0px rgba(0, 0, 0, 0.01);
+    }
 }
 
-//Section cards end
+//Section desktop-cards end
+
+//Section order start
+.order {
+    display: flex;
+    border-radius: 7px;
+    background: #200D23;
+    box-shadow: 0px 24px 53px 0px rgba(0, 0, 0, 0.49), 0px 97px 97px 0px rgba(0, 0, 0, 0.42), 0px 218px 131px 0px rgba(0, 0, 0, 0.25), 0px 387px 155px 0px rgba(0, 0, 0, 0.07), 0px 604px 169px 0px rgba(0, 0, 0, 0.01);
+    margin-top: 216px;
+    margin-right: 35px;
+    margin-bottom: 0px;
+    margin-left: 35px;
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        
+    }
+}
+
+.order__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; 
+}
+.order__text {
+    p {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-family: SF UI Display;
+        font-size: 27px;
+        font-weight: 500;
+        line-height: 124.7%; /* 33.669px */
+        letter-spacing: -0.54px;
+        text-transform: uppercase;
+        width: 851px;
+        padding-top: 494px;
+        @media (max-width: 1920px) {
+            @include adaptive-value( font-size , 27 , 11 , 1920 , 320 );
+            @include adaptive-value( width , 851 , 279 , 1920 , 320 );
+        }
+        @media (max-width: 1000px) {
+            padding-top: 0px;
+        }
+    }
+}
+.order__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: SF UI Display;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 124.7%; /* 53.322px */
+    letter-spacing: -0.855px;
+    text-transform: uppercase;
+    border-radius: 18px;
+    border: 3px solid #FFF;
+    width: 561px;
+    height: 155px;
+    margin-top: 306px;
+    @media (max-width: 1920px) {
+        @include adaptive-value( font-size , 42 , 11 , 1920 , 320 );
+        @include adaptive-value( width , 561 , 135 , 1920 , 320 );
+        @include adaptive-value( height , 155 , 37 , 1920 , 320 );
+        @include adaptive-value( margin-top , 306 , 10 , 1920 , 320 );
+    }
+}   
+
+//Section order end
+
+
+//Section premium start
+.premium {
+    display: none;
+    gap: 346px;
+    border-radius: 7px;
+    background: #000;
+    margin-top: 216px;
+}
+.premium__left{
+    display: flex;
+    flex-direction: column;
+    gap: 337px;
+    margin-left: 160px;
+}
+
+.premium__title {
+    font-family: DaMiOne;
+    font-size: 106px;
+    font-weight: 400;
+    line-height: 50px; /* 132.401px */
+    letter-spacing: -2.124px;
+    text-transform: uppercase;
+    margin-top: 307px;
+}
+.premium__subtitle {
+    font-family: DaMiOne;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 124.7%; /* 49.88px */
+    letter-spacing: -0.8px;
+    text-transform: uppercase;
+    margin-bottom: 257px;
+}
+.premium__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 157px;
+}
+.premium__more {
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+        text-align: center;
+        font-family: DaMiOne;
+        font-size: 28.291px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 124.7%; /* 35.278px */
+        letter-spacing: -0.566px;
+        text-transform: uppercase;
+        border-radius: 11.909px;
+        border: 1.985px solid #FFF;
+        width: 371.484px;
+        height: 103.191px;
+    }
+}
+//Section premium end
 
 .buy__book {
     text-align: center;
     margin-top: 38px;
+    display: none;
 }
+
+
 
 //Section footer start
 .footer__column {

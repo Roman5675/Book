@@ -285,6 +285,7 @@ img {
 }
 
 .cards {
+  display: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
