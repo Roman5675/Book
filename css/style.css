@@ -202,6 +202,7 @@ img {
   text-transform: uppercase;
 }
 .crime__title span {
+  color: #FFF;
   font-size: 54px;
   font-weight: 800;
   line-height: 124.7%; /* 67.717px */
